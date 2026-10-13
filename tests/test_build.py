@@ -211,3 +211,155 @@ def test_hero_shows_the_name_once():
         hero = hero[: hero.index("</h1>") + 400]
         assert "Javier &bull; priv/acc</h1>" in hero, page
         assert hero.count("priv/acc") == 1, page
+
+
+# ── Hugging Face models (data/models.json, assets/models.js) ─────────────────
+
+GGUF_MODEL = {
+    "id": "jvr0x/Javi0.3-4B-GGUF",
+    "library_name": "gguf",
+    "pipeline_tag": "text-generation",
+    "private": False,
+    "gated": False,
+    "tags": [
+        "gguf",
+        "llama.cpp",
+        "unsloth",
+        "lora",
+        "agent",
+        "tool-use",
+        "dgx-spark",
+        "base_model:Qwen/Qwen3.5-4B",
+        "base_model:finetune:Qwen/Qwen3.5-4B",
+        "license:apache-2.0",
+        "region:us",
+    ],
+    "siblings": [
+        {"rfilename": "README.md"},
+        {"rfilename": "Javi0.3-4B.Q4_K_M.gguf"},
+        {"rfilename": "Javi0.3-4B.Q8_0.gguf"},
+    ],
+}
+
+EXL3_MODEL = {
+    "id": "jvr0x/Javi0.3-4B-EXL3",
+    "library_name": "exllamav3",
+    "pipeline_tag": "text-generation",
+    "private": False,
+    "gated": False,
+    "tags": [
+        "exllamav3",
+        "safetensors",
+        "exl3",
+        "quantization",
+        "5-bit",
+        "agent",
+        "tool-use",
+        "dgx-spark",
+        "base_model:jvr0x/Javi0.3-4B",
+        "base_model:quantized:jvr0x/Javi0.3-4B",
+        "license:apache-2.0",
+    ],
+    "siblings": [{"rfilename": "model.safetensors"}],
+}
+
+
+def test_hf_entry_derives_a_whole_card_from_tags():
+    """A model the site has never seen still gets title, copy, meta, tags and a link."""
+    entry = build.hf_entry(GGUF_MODEL)
+    assert entry["hf"] == "Javi0.3-4B-GGUF"
+    assert entry["title"] == "Javi0.3-4B-GGUF"
+    assert entry["url"] == "https://huggingface.co/jvr0x/Javi0.3-4B-GGUF"
+    assert entry["description"] == (
+        "GGUF fine-tune of Qwen/Qwen3.5-4B. LoRA-tuned with Unsloth for agent tool use. Trained on one DGX Spark."
+    )
+    assert entry["meta"] == "GGUF · Q4_K_M / Q8_0 · base Qwen/Qwen3.5-4B · apache-2.0"
+    assert entry["tags"] == ["GGUF", "LoRA", "Unsloth", "Agent"]
+    assert entry["links"] == [{"label": "Hugging Face", "url": entry["url"]}]
+
+
+def test_hf_entry_names_own_base_without_owner_and_without_safetensors_tag():
+    """A quantised export of our own repo is a build of Javi0.3-4B, and the safetensors file tag is not a card tag."""
+    entry = build.hf_entry(EXL3_MODEL)
+    assert entry["description"] == "EXL3 build of Javi0.3-4B. Quantised on one DGX Spark."
+    assert entry["meta"] == "EXL3 · 5-bit · base Javi0.3-4B · apache-2.0"
+    assert "Safetensors" not in entry["tags"]
+    assert entry["tags"] == ["EXL3", "Agent", "Tool use", "DGX Spark"]
+
+
+def test_hf_entry_keeps_hand_written_copy_but_takes_the_url_from_huggingface():
+    """Site copy for a release wins over tag-derived copy; empty curated fields fall back to derived ones."""
+    curated = {
+        "hf": "stale-key",
+        "title": "Javi0.3-4B GGUF",
+        "description": "My own words.",
+        "meta": "",
+        "links": [],
+    }
+    entry = build.hf_entry(GGUF_MODEL, curated)
+    assert entry["title"] == "Javi0.3-4B GGUF" and entry["description"] == "My own words."
+    assert entry["meta"] == "GGUF · Q4_K_M / Q8_0 · base Qwen/Qwen3.5-4B · apache-2.0"
+    assert entry["hf"] == "Javi0.3-4B-GGUF" and entry["url"] == "https://huggingface.co/jvr0x/Javi0.3-4B-GGUF"
+
+
+def test_fetch_hf_models_keeps_only_public_ungated_repos_of_the_author(monkeypatch):
+    """The request asks for the card fields newest first, and private/gated/other-author repos never reach the site."""
+    seen = {}
+
+    def fake_get(url):
+        seen["url"] = url
+        return [
+            GGUF_MODEL,
+            dict(EXL3_MODEL, private=True),
+            dict(EXL3_MODEL, gated="auto"),
+            dict(GGUF_MODEL, id="someone-else/Model"),
+            {"tags": ["no id"]},
+        ]
+
+    monkeypatch.setattr(build, "hf_get", fake_get)
+    models = build.fetch_hf_models()
+    assert "author=jvr0x" in seen["url"] and "sort=lastModified" in seen["url"] and "expand[]=siblings" in seen["url"]
+    assert [m["id"] for m in models] == ["jvr0x/Javi0.3-4B-GGUF"]
+
+
+def test_fetch_hf_models_rejects_a_response_that_is_not_a_list(monkeypatch):
+    """An API error body is a build failure, not a page with no models."""
+    monkeypatch.setattr(build, "hf_get", lambda url: {"error": "not found"})
+    with pytest.raises(build.BuildError, match="expected a list"):
+        build.fetch_hf_models()
+
+
+def test_refresh_models_adds_new_repos_and_drops_deleted_ones(tmp_path, monkeypatch):
+    """Publishing adds a card, deleting removes it, curated copy survives, non-Hugging Face entries are kept."""
+    data = tmp_path / "data"
+    data.mkdir()
+    committed = [
+        {
+            "hf": "Javi0.3-4B-GGUF",
+            "title": "My words",
+            "url": "https://huggingface.co/jvr0x/Javi0.3-4B-GGUF",
+            "description": "Hand written.",
+        },
+        {"hf": "DeletedRepo", "title": "Gone", "url": "https://huggingface.co/jvr0x/DeletedRepo"},
+        {"title": "Somewhere else", "url": "https://example.com/model"},
+    ]
+    (data / "models.json").write_text(json.dumps(committed), encoding="utf-8")
+    monkeypatch.setattr(build, "hf_get", lambda url: [EXL3_MODEL, GGUF_MODEL])
+    build.refresh_models(data)
+
+    entries = json.loads((data / "models.json").read_text(encoding="utf-8"))
+    assert [e.get("hf") for e in entries] == ["Javi0.3-4B-EXL3", "Javi0.3-4B-GGUF", None]
+    assert [e["title"] for e in entries] == ["Javi0.3-4B-EXL3", "My words", "Somewhere else"]
+    assert entries[1]["description"] == "Hand written."
+    assert entries[1]["url"] == "https://huggingface.co/jvr0x/Javi0.3-4B-GGUF"
+
+
+def test_models_page_is_wired_to_read_huggingface_live():
+    """The live list needs its hook, its script and a data-hf key on every committed card, or cards duplicate."""
+    page = (REPO / "models" / "index.html").read_text(encoding="utf-8")
+    assert '<div class="cards" data-hf-models="jvr0x">' in page
+    assert '<script src="/assets/models.js"></script>' in page
+    block = page[page.index("<!-- jx:cards models -->") : page.index("<!-- /jx:cards -->")]
+    committed = json.loads((REPO / "data" / "models.json").read_text(encoding="utf-8"))
+    assert block.count('<div class="card fade-in" data-hf="') == block.count('<h3 class="card-title">')
+    assert block.count('<div class="card fade-in" data-hf="') == len(committed)

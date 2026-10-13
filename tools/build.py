@@ -7,6 +7,8 @@ GitHub), so run this after editing partials/, data/ or a page, and commit the re
     python3 tools/build.py            # offline, idempotent
     python3 tools/build.py --recipes  # first refreshes data/recipes.json and
                                       # data/bench-recipes.json from GitHub via `gh api`
+    python3 tools/build.py --models   # first refreshes data/models.json from the
+                                      # Hugging Face API
 
 Marker blocks rewritten in each page listed in data/pages.json (with a "file"):
     <!-- jx:head -->        ... <!-- /jx:head -->        title, description, canonical, OG/Twitter
@@ -24,7 +26,9 @@ import json
 import re
 import subprocess
 import sys
+import urllib.request
 from pathlib import Path
+from urllib.parse import quote_plus
 
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://jvr0x.com"
@@ -32,6 +36,23 @@ DEFAULT_OG_IMAGE = f"{SITE}/assets/og-default.png"
 
 AI_MODELS_REPO = "jvr0x/ai-models"
 BENCH_REPO = "jvr0x/dgx-spark-bench"
+
+HF_AUTHOR = "jvr0x"
+HF_API = "https://huggingface.co/api/models"
+HF_FIELDS = ("cardData", "downloads", "lastModified", "likes", "library_name", "pipeline_tag", "siblings", "tags")
+HF_MAX_TAGS = 4
+# Reason: Hugging Face tags are machine names; these are the ones worth a card, in card order.
+HF_TAG_LABELS = (
+    ("gguf", "GGUF"),
+    ("exllamav3", "EXL3"),
+    ("safetensors", "Safetensors"),
+    ("lora", "LoRA"),
+    ("unsloth", "Unsloth"),
+    ("agent", "Agent"),
+    ("tool-use", "Tool use"),
+    ("distillation", "Distilled"),
+    ("dgx-spark", "DGX Spark"),
+)
 
 
 class BuildError(Exception):
@@ -146,6 +167,8 @@ def validate_items(items: list, where: str) -> list[dict]:
         for key in ("description", "meta"):
             if key in item and not isinstance(item[key], str):
                 raise BuildError(f"{at}: '{key}' must be a string")
+        if "hf" in item and (not isinstance(item["hf"], str) or not item["hf"].strip()):
+            raise BuildError(f"{at}: 'hf' must be a non-empty Hugging Face repo name")
         tags = item.get("tags", [])
         if not isinstance(tags, list) or not all(isinstance(t, str) for t in tags):
             raise BuildError(f"{at}: 'tags' must be a list of strings")
@@ -191,8 +214,9 @@ def render_card(item: dict) -> str:
     Reason: a card is a <div> with a title link, not a wrapping <a>, because entries can
     carry their own links and nested anchors are invalid HTML.
     """
+    opening = f'<div class="card fade-in" data-hf="{esc(item["hf"])}">' if item.get("hf") else '<div class="card fade-in">'
     lines = [
-        '<div class="card fade-in">',
+        opening,
         f'  <h3 class="card-title">{anchor(item["url"], item["title"])}</h3>',
     ]
     if item.get("description"):
@@ -446,14 +470,204 @@ def refresh_recipes(data_dir: Path) -> None:
     print(f"recipes: {len(recipes)} lmswitch recipes, {len(bench)} bench configs")
 
 
+# ── --models: regenerate model data from Hugging Face ────────────────────────
+
+
+def hf_get(url: str) -> object:
+    """GETs a Hugging Face API URL and returns the parsed JSON."""
+    request = urllib.request.Request(url, headers={"User-Agent": "jvr0x.com site build (tools/build.py)"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except (OSError, ValueError) as e:
+        raise BuildError(f"{url} failed: {e}") from e
+
+
+def fetch_hf_models(author: str = HF_AUTHOR) -> list[dict]:
+    """Public models of an author, newest first, with the fields a card needs."""
+    query = "".join(f"&expand[]={field}" for field in HF_FIELDS)
+    models = hf_get(f"{HF_API}?author={quote_plus(author)}{query}&sort=lastModified&direction=-1")
+    if not isinstance(models, list) or not all(isinstance(m, dict) for m in models):
+        raise BuildError(f"{HF_API}: expected a list of models")
+    return [
+        m
+        for m in models
+        if isinstance(m.get("id"), str) and m["id"].startswith(f"{author}/") and not m.get("private") and not m.get("gated")
+    ]
+
+
+def _hf_tags(model: dict) -> list[str]:
+    """The string tags of a model entry."""
+    return [t for t in (model.get("tags") or []) if isinstance(t, str)]
+
+
+def _hf_base(model: dict, author: str = HF_AUTHOR) -> str:
+    """Base model id from the base_model tags; the finetune/quantized forms name it best.
+
+    A base under our own author is named without the owner: the card already sits on that profile.
+    """
+    tags = _hf_tags(model)
+    for prefix in ("base_model:finetune:", "base_model:quantized:", "base_model:"):
+        for tag in tags:
+            if tag.startswith(prefix):
+                base = tag[len(prefix) :]
+                return base[len(author) + 1 :] if author and base.startswith(f"{author}/") else base
+    return ""
+
+
+def _hf_quantisations(model: dict) -> list[str]:
+    """Quants the repo ships: GGUF file suffixes, else the bit-depth tag."""
+    quants: list[str] = []
+    for sibling in model.get("siblings") or []:
+        name = sibling.get("rfilename", "") if isinstance(sibling, dict) else ""
+        m = re.search(r"\.([A-Za-z0-9_]+)\.gguf$", name)
+        if m and m.group(1) not in quants:
+            quants.append(m.group(1))
+    return quants or [t for t in _hf_tags(model) if re.fullmatch(r"\d+-bit", t)]
+
+
+def _hf_format(model: dict) -> str:
+    """The serving format shown on the card."""
+    tags = set(_hf_tags(model))
+    library = model.get("library_name") or ""
+    if "gguf" in tags or library == "gguf":
+        return "GGUF"
+    if "exllamav3" in tags or "exl3" in tags or library == "exllamav3":
+        return "EXL3"
+    if library == "transformers" or "safetensors" in tags:
+        return "Safetensors"
+    return library or "Model"
+
+
+def _hf_license(model: dict) -> str:
+    """License id from the license: tag."""
+    for tag in _hf_tags(model):
+        if tag.startswith("license:"):
+            return tag[len("license:") :]
+    return ""
+
+
+def describe_hf_model(model: dict) -> str:
+    """Card copy for a model with no hand-written description, from its tags alone."""
+    tags = set(_hf_tags(model))
+    base = _hf_base(model)
+    quantised = any(t.startswith("base_model:quantized:") for t in _hf_tags(model))
+    fmt = _hf_format(model)
+    if base and quantised:
+        lead = f"{fmt} build of {base}"
+    elif base:
+        lead = f"{fmt} fine-tune of {base}"
+    else:
+        lead = f"{fmt} model"
+    if "lora" in tags and "unsloth" in tags:
+        tuning = "LoRA-tuned with Unsloth"
+    elif "unsloth" in tags:
+        tuning = "Tuned with Unsloth"
+    elif "lora" in tags:
+        tuning = "LoRA-tuned"
+    else:
+        tuning = ""
+    if tuning and tags & {"agent", "tool-use"}:
+        tuning += " for agent tool use"
+    sentences = [lead + "."]
+    if tuning:
+        sentences.append(tuning + ".")
+    if model.get("pipeline_tag") == "image-text-to-text":
+        sentences.append("Takes text and image inputs.")
+    if "dgx-spark" in tags:
+        sentences.append("Quantised on one DGX Spark." if quantised else "Trained on one DGX Spark.")
+    return " ".join(sentences)
+
+
+def hf_meta(model: dict) -> str:
+    """The format / quants / base / license line under a card title."""
+    parts = [_hf_format(model)]
+    quants = _hf_quantisations(model)
+    if quants:
+        parts.append(" / ".join(quants))
+    base = _hf_base(model)
+    if base:
+        parts.append(f"base {base}")
+    if _hf_license(model):
+        parts.append(_hf_license(model))
+    return " · ".join(parts)
+
+
+def hf_tags(model: dict) -> list[str]:
+    """Up to HF_MAX_TAGS card tags, in HF_TAG_LABELS order.
+
+    Reason: an EXL3 repo also carries the safetensors tag, so the Safetensors label only
+    counts when the format really is Safetensors.
+    """
+    tags = set(_hf_tags(model))
+    fmt = _hf_format(model)
+    out = [label for tag, label in HF_TAG_LABELS if tag in tags]
+    out = [label for label in out if label != "Safetensors" or fmt == "Safetensors"]
+    if fmt not in out:
+        out.insert(0, fmt)
+    return out[:HF_MAX_TAGS]
+
+
+def hf_entry(model: dict, curated: dict | None = None) -> dict:
+    """Card entry for one Hugging Face repo.
+
+    Reason: curated copy (hand-written title/description/meta/tags/links, looked up by repo name)
+    wins where present, because what the site says about its own releases beats what the tags say.
+    The url always comes from Hugging Face, so the card cannot point at a renamed repo.
+    """
+    name = model["id"].split("/")[-1]
+    entry = {
+        "hf": name,
+        "title": name,
+        "url": f"https://huggingface.co/{model['id']}",
+        "description": describe_hf_model(model),
+        "meta": hf_meta(model),
+        "tags": hf_tags(model),
+        "links": [{"label": "Hugging Face", "url": f"https://huggingface.co/{model['id']}"}],
+    }
+    for key in ("title", "description", "meta", "tags", "links"):
+        if curated and curated.get(key):
+            entry[key] = curated[key]
+    return entry
+
+
+def refresh_models(data_dir: Path, author: str = HF_AUTHOR) -> None:
+    """Regenerates data/models.json from the Hugging Face API, newest first.
+
+    Reason: publishing on Hugging Face has to be enough for a model to show up on the site.
+    Committed entries are matched to repos by their `hf` name: a hand-written entry keeps its
+    copy instead of the tag-derived one, and entries without `hf` (not from Hugging Face) are
+    kept as they are.
+    """
+    committed = load_json_list(data_dir / "models.json")
+    curated = {
+        e["hf"]: e for e in committed if isinstance(e, dict) and isinstance(e.get("hf"), str) and e["hf"]
+    }
+    hand_made = [e for e in committed if isinstance(e, dict) and not e.get("hf")]
+    entries: list[dict] = []
+    hand = 0
+    for model in fetch_hf_models(author):
+        entry = curated.pop(model["id"].split("/")[-1], None)
+        if entry:
+            hand += 1
+        entries.append(hf_entry(model, entry))
+    entries.extend(hand_made)
+    validate_items(entries, "models.json")
+    write_if_changed(data_dir / "models.json", json.dumps(entries, indent=2, ensure_ascii=False) + "\n")
+    print(f"models: {len(entries)} cards from Hugging Face, {hand} with hand-written copy")
+
+
 def main(argv: list[str] | None = None) -> int:
     """CLI entry point."""
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--recipes", action="store_true", help="refresh recipe data from GitHub first (needs gh)")
+    parser.add_argument("--models", action="store_true", help="refresh data/models.json from the Hugging Face API first")
     args = parser.parse_args(argv)
     try:
         if args.recipes:
             refresh_recipes(ROOT / "data")
+        if args.models:
+            refresh_models(ROOT / "data")
         changed = build(ROOT)
     except BuildError as e:
         print(f"build failed: {e}", file=sys.stderr)

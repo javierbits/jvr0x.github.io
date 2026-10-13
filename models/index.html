@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- jx:head -->
 <title>Models · jvr0x</title>
-<meta name="description" content="Local AI fine-tunes by jvr0x, trained on one DGX Spark and published as GGUF on Hugging Face: Javi0.2-4B agent model and Qwen3-4B Pirate.">
+<meta name="description" content="Local AI fine-tunes by jvr0x, trained on DGX Spark and published on Hugging Face in GGUF and EXL3 quants for llama.cpp and ExLlamaV3.">
 <link rel="canonical" href="https://jvr0x.com/models/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="jvr0x">
 <meta property="og:title" content="Models · jvr0x">
-<meta property="og:description" content="Local AI fine-tunes by jvr0x, trained on one DGX Spark and published as GGUF on Hugging Face: Javi0.2-4B agent model and Qwen3-4B Pirate.">
+<meta property="og:description" content="Local AI fine-tunes by jvr0x, trained on DGX Spark and published on Hugging Face in GGUF and EXL3 quants for llama.cpp and ExLlamaV3.">
 <meta property="og:url" content="https://jvr0x.com/models/">
 <meta property="og:image" content="https://jvr0x.com/assets/og-default.png">
 <meta property="og:image:width" content="1200">
@@ -19,7 +19,7 @@
 <meta name="twitter:site" content="@jvr0x">
 <meta name="twitter:creator" content="@jvr0x">
 <meta name="twitter:title" content="Models · jvr0x">
-<meta name="twitter:description" content="Local AI fine-tunes by jvr0x, trained on one DGX Spark and published as GGUF on Hugging Face: Javi0.2-4B agent model and Qwen3-4B Pirate.">
+<meta name="twitter:description" content="Local AI fine-tunes by jvr0x, trained on DGX Spark and published on Hugging Face in GGUF and EXL3 quants for llama.cpp and ExLlamaV3.">
 <meta name="twitter:image" content="https://jvr0x.com/assets/og-default.png">
 <!-- /jx:head -->
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -51,21 +51,58 @@
   <section class="section page-head">
     <p class="prompt">$ ls ~/models/</p>
     <h1>Models</h1>
-    <p class="lede">Fine-tunes I train on a single DGX Spark and publish as GGUF on
-      <a href="https://huggingface.co/jvr0x" rel="noopener">Hugging Face</a>, with a write-up on X for each release.</p>
+    <p class="lede">Fine-tunes I train on my DGX Sparks and publish on
+      <a href="https://huggingface.co/jvr0x" rel="noopener">Hugging Face</a> in GGUF and EXL3 quants, with a
+      write-up on X for each release. The cards below are that Hugging Face profile read live, so a new
+      release shows up here as soon as it is public.</p>
   </section>
 
   <section class="section">
-    <div class="cards">
+    <div class="cards" data-hf-models="jvr0x">
 <!-- jx:cards models -->
-<div class="card fade-in">
+<div class="card fade-in" data-hf="Javi0.3-4B-EXL3">
+  <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Javi0.3-4B-EXL3" rel="noopener">Javi0.3-4B-EXL3</a></h3>
+  <p class="card-desc">EXL3 build of Javi0.3-4B. Quantised on one DGX Spark.</p>
+  <p class="card-meta">EXL3 · 5-bit · base Javi0.3-4B · apache-2.0</p>
+  <div class="tags"><span class="tag sm">EXL3</span><span class="tag sm">Agent</span><span class="tag sm">Tool use</span><span class="tag sm">DGX Spark</span></div>
+  <div class="card-links"><a href="https://huggingface.co/jvr0x/Javi0.3-4B-EXL3" rel="noopener">Hugging Face</a></div>
+</div>
+<div class="card fade-in" data-hf="Javi0.3-2B-GGUF">
+  <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Javi0.3-2B-GGUF" rel="noopener">Javi0.3-2B-GGUF</a></h3>
+  <p class="card-desc">GGUF fine-tune of Qwen/Qwen3.5-2B. LoRA-tuned with Unsloth for agent tool use. Trained on one DGX Spark.</p>
+  <p class="card-meta">GGUF · Q4_K_M / Q8_0 · base Qwen/Qwen3.5-2B · apache-2.0</p>
+  <div class="tags"><span class="tag sm">GGUF</span><span class="tag sm">LoRA</span><span class="tag sm">Unsloth</span><span class="tag sm">Agent</span></div>
+  <div class="card-links"><a href="https://huggingface.co/jvr0x/Javi0.3-2B-GGUF" rel="noopener">Hugging Face</a></div>
+</div>
+<div class="card fade-in" data-hf="Javi0.3-2B">
+  <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Javi0.3-2B" rel="noopener">Javi0.3-2B</a></h3>
+  <p class="card-desc">Safetensors fine-tune of Qwen/Qwen3.5-2B. LoRA-tuned with Unsloth for agent tool use. Takes text and image inputs. Trained on one DGX Spark.</p>
+  <p class="card-meta">Safetensors · base Qwen/Qwen3.5-2B · apache-2.0</p>
+  <div class="tags"><span class="tag sm">Safetensors</span><span class="tag sm">LoRA</span><span class="tag sm">Unsloth</span><span class="tag sm">Agent</span></div>
+  <div class="card-links"><a href="https://huggingface.co/jvr0x/Javi0.3-2B" rel="noopener">Hugging Face</a></div>
+</div>
+<div class="card fade-in" data-hf="Javi0.3-4B-GGUF">
+  <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Javi0.3-4B-GGUF" rel="noopener">Javi0.3-4B-GGUF</a></h3>
+  <p class="card-desc">GGUF fine-tune of Qwen/Qwen3.5-4B. LoRA-tuned with Unsloth for agent tool use. Trained on one DGX Spark.</p>
+  <p class="card-meta">GGUF · Q4_K_M / Q8_0 · base Qwen/Qwen3.5-4B · apache-2.0</p>
+  <div class="tags"><span class="tag sm">GGUF</span><span class="tag sm">LoRA</span><span class="tag sm">Unsloth</span><span class="tag sm">Agent</span></div>
+  <div class="card-links"><a href="https://huggingface.co/jvr0x/Javi0.3-4B-GGUF" rel="noopener">Hugging Face</a></div>
+</div>
+<div class="card fade-in" data-hf="Javi0.3-4B">
+  <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Javi0.3-4B" rel="noopener">Javi0.3-4B</a></h3>
+  <p class="card-desc">Safetensors fine-tune of Qwen/Qwen3.5-4B. LoRA-tuned with Unsloth for agent tool use. Takes text and image inputs. Trained on one DGX Spark.</p>
+  <p class="card-meta">Safetensors · base Qwen/Qwen3.5-4B · apache-2.0</p>
+  <div class="tags"><span class="tag sm">Safetensors</span><span class="tag sm">LoRA</span><span class="tag sm">Unsloth</span><span class="tag sm">Agent</span></div>
+  <div class="card-links"><a href="https://huggingface.co/jvr0x/Javi0.3-4B" rel="noopener">Hugging Face</a></div>
+</div>
+<div class="card fade-in" data-hf="Javi0.2-4B-GGUF">
   <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Javi0.2-4B-GGUF" rel="noopener">Javi0.2-4B (alpha)</a></h3>
   <p class="card-desc">A 4B agent model fine-tuned from Qwen3.5-4B to look things up instead of guessing, say so when it can&#x27;t verify, and reason from first principles. Trained on one DGX Spark.</p>
   <p class="card-meta">GGUF · Q8_0 / Q4_K_M · base Qwen3.5-4B</p>
   <div class="tags"><span class="tag sm">Agent</span><span class="tag sm">Fine-tune</span><span class="tag sm">DGX Spark</span></div>
   <div class="card-links"><a href="https://huggingface.co/jvr0x/Javi0.2-4B-GGUF" rel="noopener">Hugging Face</a><a href="https://x.com/jvr0x/status/2103182873268244639" rel="noopener">write-up on X</a></div>
 </div>
-<div class="card fade-in">
+<div class="card fade-in" data-hf="Qwen3-4B-Pirate-GGUF">
   <h3 class="card-title"><a href="https://huggingface.co/jvr0x/Qwen3-4B-Pirate-GGUF" rel="noopener">Qwen3-4B Pirate</a></h3>
   <p class="card-desc">Qwen3-4B-Instruct-2507 fine-tuned to answer everything in heavy pirate dialect, no system prompt needed. LoRA trained in 7m20s on one DGX Spark with Unsloth; 74.5 tok/s at Q4_K_M on Spark.</p>
   <p class="card-meta">GGUF · Q4_K_M · base Qwen3-4B-Instruct-2507</p>
@@ -84,11 +121,12 @@
     <a href="https://github.com/jvr0x" rel="noopener">github</a>
     <a href="https://huggingface.co/jvr0x" rel="noopener">huggingface</a>
     <a href="https://agicheckpoint.com" rel="noopener">agicheckpoint.com</a>
-    <a href="https://ko-fi.com/jvr0x" rel="noopener">ko-fi</a>
+    <a href="https://ko-fi.com/jvr0x" rel="noopener">support me</a>
   </div>
   <p class="jx-sig">Javier &bull; priv/acc | Local AI, security, privacy &amp; crypto</p>
 </footer>
 <!-- /jx:footer -->
   <script src="/script.js"></script>
+  <script src="/assets/models.js"></script>
 </body>
 </html>

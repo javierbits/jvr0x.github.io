@@ -2,7 +2,7 @@
   {
     "title": "Models",
     "url": "/models/",
-    "description": "Fine-tunes trained on one DGX Spark and published as GGUF: Javi0.2-4B, an agent model that looks things up instead of guessing, and Qwen3-4B Pirate.",
+    "description": "Fine-tunes I train on my DGX Sparks and publish on Hugging Face in GGUF and EXL3 quants, listed straight from the Hugging Face profile.",
     "tags": ["Fine-tunes", "GGUF", "Hugging Face"]
   },
   {

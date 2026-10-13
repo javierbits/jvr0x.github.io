@@ -21,7 +21,7 @@
     "path": "/models/",
     "file": "models/index.html",
     "title": "Models · jvr0x",
-    "description": "Local AI fine-tunes by jvr0x, trained on one DGX Spark and published as GGUF on Hugging Face: Javi0.2-4B agent model and Qwen3-4B Pirate."
+    "description": "Local AI fine-tunes by jvr0x, trained on DGX Spark and published on Hugging Face in GGUF and EXL3 quants for llama.cpp and ExLlamaV3."
   },
   {
     "path": "/recipes/",

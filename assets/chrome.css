@@ -190,7 +190,7 @@
 
 /*
  * Substack embed (https://agicheckpoint.com/embed) for page content, as
- * <iframe class="jx-embed" ...> (home and /newsletter only).
+ * <div class="jx-embed-frame"><iframe class="jx-embed" ...></iframe></div> (home and /newsletter only).
  * Reason: the embed is cross-origin, so it can't report its own height. Heights below are
  * the measured content height at each iframe width (Playwright, tools/measure_embed.py; see
  * AGENTS.md) plus ~24px above and below, which also keeps Substack's bottom-right watermark
@@ -201,19 +201,40 @@
  *   iframe 326-357px:     content <= 519 -> 568px
  *   iframe < 326px:       content 556 at 300px -> 610px
  * Breakpoints are viewport widths: iframe width = viewport - 2 * 16px gutter on phones.
+ *
+ * Dark: Substack serves the embed light and only follows the publication's own theme (it has
+ * no dark query parameter and ignores prefers-color-scheme), so the document inside is
+ * flipped here. hue-rotate(180deg) after invert(1) puts the hues back where they were and
+ * leaves only luminance inverted, so the teal button stays teal and Substack's black wordmark
+ * comes out light. The frame (border, panel background, radius) sits outside the filter so it
+ * keeps the site colours exactly; the iframe itself stays transparent to show that panel while
+ * the third-party document is still loading.
  */
+.jx-embed-frame {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  border: 1px solid var(--jx-border, #1e2a36);
+  border-radius: 8px;
+  background: var(--jx-bg-card, #0f1419);
+  overflow: hidden;
+}
+
 .jx-embed {
   display: block;
   width: 100%;
   max-width: 480px;
   height: 508px;
   min-height: 0;
-  margin: 0.8rem 0 0;
+  margin: 0;
   padding: 0;
-  border: 1px solid var(--jx-border, #1e2a36);
-  border-radius: 8px;
-  background: #ffffff;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   color-scheme: light;
+  filter: invert(1) hue-rotate(180deg);
   overflow: hidden;
 }
 
@@ -255,10 +276,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .jx-header .jx-blink {
-    animation: none;
-  }
-
+  /* Reason: the logo caret only fades its opacity at 1Hz, so it is not motion and stays as is
+     (one blink per second is far below the 3 flashes/second threshold, and stopping it made the
+     prompt look frozen for anyone whose OS asks for reduced motion). Colour transitions are the
+     part here worth removing. */
   .jx-header a,
   .jx-footer a {
     transition: none;

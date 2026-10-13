@@ -15,6 +15,7 @@ output.** There is no build on GitHub: run the build locally and commit the resu
 | `partials/header.html`, `partials/footer.html` | Shared header/footer (the CHROME.md contract) |
 | `assets/chrome.css` | Styles for every `jx-` class; also loaded by project repos |
 | `style.css`, `script.js` | Site styles; fade-in on scroll |
+| `assets/models.js` | Models page only: re-renders the card list from the live Hugging Face API, keeping the committed cards as fallback |
 | `data/pages.json` | Every page: path, file, title, description (drives head tags, chrome and sitemap) |
 | `data/*.json` | Card lists: `home`, `models`, `bots`, `tools`, `lab`, `recipe-forks`, `recipes`, `bench-recipes` |
 | `tools/build.py` | The build (stdlib only) |
@@ -31,6 +32,7 @@ output.** There is no build on GitHub: run the build locally and commit the resu
 ```bash
 python3 tools/build.py            # offline and idempotent: a second run changes nothing
 python3 tools/build.py --recipes  # first refreshes data/recipes.json + data/bench-recipes.json via `gh api`
+python3 tools/build.py --models   # first refreshes data/models.json from the Hugging Face API
 ```
 
 For every page in `data/pages.json` that has a `file`, the build rewrites these marker blocks:
@@ -49,7 +51,7 @@ URLs must be `https://...`, `http://...` or root-relative `/...`. All text is HT
 
 ### Common changes
 
-- **New model / bot / tool**: add one entry to `data/models.json` / `bots.json` / `tools.json`, run the build, commit.
+- **New bot / tool**: add one entry to `data/bots.json` / `data/tools.json`, run the build, commit.
 - **New page**: create `<name>/index.html` with the head/header/footer markers (copy any subpage), add it
   to `data/pages.json`, run the build.
 - **New project repo page on jvr0x.com**: add `{"path": "/<repo>/"}` to `data/pages.json` and to
@@ -59,6 +61,10 @@ URLs must be `https://...`, `http://...` or root-relative `/...`. All text is HT
   `--recipes`; don't hand-edit them. A bench config links to an lmswitch YAML only on an exact name match
   (a YAML file inside the bench recipe dir, else the dir name, equals an ai-models file stem).
   Hand-written recipe entries live in `data/recipe-forks.json`.
+- **New model on Hugging Face**: nothing to edit. `/models/` reads the live `jvr0x` profile, and
+  `python3 tools/build.py --models` refreshes the committed cards (crawlable, no-JS baseline) to match.
+  Card copy is derived from the repo tags; to write your own for a release, keep its `hf` key in
+  `data/models.json` and hand-edit `title`/`description`/`meta`/`tags`/`links` (empty fields fall back to derived ones).
 
 ## Shared chrome contract (project repos)
 
@@ -72,7 +78,9 @@ selectors, no `:root` variables, no `position: fixed`.
 If you change `partials/`, update the project repos to the same markup.
 
 The footer has no newsletter signup. The Substack embed appears only on the homepage and /newsletter,
-as `<iframe class="jx-embed" ...>` in the page content.
+as `<div class="jx-embed-frame"><iframe class="jx-embed" ...></iframe></div>` in the page content. The
+frame (border, panel, radius) is unfiltered site chrome; the iframe is inverted inside it, because
+Substack serves that embed light and only follows the publication's own theme (`assets/chrome.css`).
 
 ## Identity and copy
 

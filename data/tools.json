@@ -30,5 +30,12 @@
     "url": "https://github.com/jvr0x/dgx-spark-rack",
     "description": "Stackable, parametric, 3D-printable desktop rack for DGX Spark, written in OpenSCAD.",
     "tags": ["OpenSCAD", "3D printing", "DGX Spark"]
+  },
+  {
+    "title": "RepoBeagle",
+    "url": "https://github.com/jvr0x/repobeagle",
+    "description": "Static safety scanner for GitHub repos: a GREEN / YELLOW / RED verdict with file:line evidence before you clone or install. Never runs the code; catches prompt injection, MCP tool poisoning and install-time traps, entirely offline in a sandboxed container.",
+    "tags": ["Security", "CLI", "Docker", "AI agents"],
+    "links": [{"label": "Grok bot", "url": "https://x.ai/bot/bTuuNK785OULBheQ5rPZ-"}]
   }
 ]

@@ -8,5 +8,15 @@
       {"label": "open the bot", "url": "https://x.ai/bot/Mj5NGpCO2mcpit2zPqUjg"},
       {"label": "agicheckpoint.com", "url": "https://agicheckpoint.com"}
     ]
+  },
+  {
+    "title": "RepoBeagle",
+    "url": "https://x.ai/bot/bTuuNK785OULBheQ5rPZ-",
+    "description": "Paste a GitHub repo link and the bot replies with a GREEN / YELLOW / RED safety verdict from RepoBeagle, before you clone or install anything.",
+    "tags": ["Grok", "Security", "Repo scanning"],
+    "links": [
+      {"label": "open the bot", "url": "https://x.ai/bot/bTuuNK785OULBheQ5rPZ-"},
+      {"label": "repobeagle on GitHub", "url": "https://github.com/jvr0x/repobeagle"}
+    ]
   }
 ]

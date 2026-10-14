@@ -10,8 +10,8 @@
 - [Models](https://jvr0x.com/models/): fine-tunes trained on one DGX Spark, published as GGUF
 - [Recipes](https://jvr0x.com/recipes/): lmswitch serving configs for DGX Spark and the dgx-spark-bench recipe behind every benchmark
 - [Lab](https://jvr0x.com/lab/): benchmarks, a tokens/sec simulator, the Voxel Bridge Challenge
-- [Tools](https://jvr0x.com/tools/): lmswitch, murmur, SolDecode, zed-token-counter, dgx-spark-rack
-- [Grok bots](https://jvr0x.com/bots/): the AGI Checkpoint bot on X
+- [Tools](https://jvr0x.com/tools/): lmswitch, RepoBeagle, murmur, SolDecode, zed-token-counter, dgx-spark-rack
+- [Grok bots](https://jvr0x.com/bots/): AGI Checkpoint and RepoBeagle Grok bots on X
 
 ## Projects
 

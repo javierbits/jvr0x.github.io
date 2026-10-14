@@ -45,7 +45,7 @@
     "path": "/bots/",
     "file": "bots/index.html",
     "title": "Grok bots · jvr0x",
-    "description": "Local AI news delivered on X: Grok bots by jvr0x, starting with the AGI Checkpoint bot that sends each Friday issue and a mid-week roundup."
+    "description": "Grok bots on X by jvr0x: AGI Checkpoint delivers each newsletter issue and a mid-week roundup of my posts, RepoBeagle scans any GitHub repo for safety before you clone it."
   },
   {
     "path": "/voxel-bridge-challenge/",

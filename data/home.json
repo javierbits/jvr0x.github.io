@@ -20,13 +20,13 @@
   {
     "title": "Grok bots",
     "url": "/bots/",
-    "description": "The AGI Checkpoint Grok bot: each Friday issue plus a mid-week roundup of my X posts.",
-    "tags": ["Grok", "Newsletter"]
+    "description": "Grok bots that work for you on X: AGI Checkpoint delivers each Friday issue plus a mid-week roundup, RepoBeagle returns a repo safety verdict for any link you paste.",
+    "tags": ["Grok", "Newsletter", "Security"]
   },
   {
     "title": "Tools",
     "url": "/tools/",
-    "description": "lmswitch, murmur local dictation, SolDecode, a Zed token counter and a 3D-printable DGX Spark rack.",
+    "description": "lmswitch, RepoBeagle repo scanning, murmur local dictation, SolDecode, a Zed token counter and a 3D-printable DGX Spark rack.",
     "tags": ["CLI", "macOS", "Extensions"]
   },
   {
@@ -38,7 +38,7 @@
   {
     "title": "Odin Scan",
     "url": "https://odinscan.ai",
-    "description": "My company: continuous AI security auditing for smart contracts, with multi-agent pipelines across EVM, Solana, CosmWasm and Move.",
-    "tags": ["Security", "Agents", "Smart contracts"]
+    "description": "My company: a continuous AI security auditing scanner for smart contracts. A deep AI audit agent plus deterministic rules across Solana, EVM, CosmWasm and Cosmos SDK, with a GitHub Action that screens every pull request.",
+    "tags": ["Security", "AI", "Smart contracts"]
   }
 ]

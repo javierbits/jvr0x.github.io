@@ -20,7 +20,7 @@
   {
     "title": "Grok bots",
     "url": "/bots/",
-    "description": "Grok bots that work for you on X: AGI Checkpoint delivers each Friday issue plus a mid-week roundup, RepoBeagle returns a repo safety verdict for any link you paste.",
+    "description": "Grok bots that work for you on X: they plug into your workflows, automate the busywork and deliver results right in your timeline.",
     "tags": ["Grok", "Newsletter", "Security"]
   },
   {
@@ -38,7 +38,7 @@
   {
     "title": "Odin Scan",
     "url": "https://odinscan.ai",
-    "description": "My company: a continuous AI security auditing scanner for smart contracts. A deep AI audit agent plus deterministic rules across Solana, EVM, CosmWasm and Cosmos SDK, with a GitHub Action that screens every pull request.",
+    "description": "A continuous AI security auditing scanner for smart contracts: a deep AI audit agent plus deterministic rules across Solana, EVM, CosmWasm and Cosmos SDK, with a GitHub Action that screens every pull request.",
     "tags": ["Security", "AI", "Smart contracts"]
   }
 ]

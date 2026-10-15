@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="105" height="20" role="img" aria-label="repobeagle: RED">
+<title>repobeagle: RED</title>
+<clipPath id="r"><rect width="105" height="20" rx="3" fill="#fff"/></clipPath>
+<g clip-path="url(#r)">
+<rect width="75" height="20" fill="#555"/>
+<rect x="75" width="30" height="20" fill="#cb2431"/>
+</g>
+<g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+<text x="38" y="14" fill="#010101" fill-opacity=".3">repobeagle</text>
+<text x="37" y="14">repobeagle</text>
+<text x="91.0" y="14" fill="#010101" fill-opacity=".3">RED</text>
+<text x="90.0" y="14">RED</text>
+</g>
+</svg>

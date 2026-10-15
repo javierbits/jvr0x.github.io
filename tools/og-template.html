@@ -16,31 +16,56 @@
     flex-direction: column;
     position: relative;
   }
+  .glow {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      radial-gradient(720px 420px at 16% 6%, rgba(0, 255, 65, 0.13), transparent 65%),
+      radial-gradient(900px 520px at 94% 112%, rgba(41, 98, 255, 0.10), transparent 62%);
+  }
+  .grid {
+    position: absolute; inset: 0; z-index: 0;
+    background:
+      linear-gradient(rgba(197, 205, 216, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(197, 205, 216, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(ellipse at 24% 18%, black 25%, transparent 75%);
+    mask-image: radial-gradient(ellipse at 24% 18%, black 25%, transparent 75%);
+  }
   body::before {
     content: "";
-    position: absolute; inset: 0;
-    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.12) 2px, rgba(0,0,0,0.12) 4px);
+    position: absolute; inset: 0; z-index: 2;
+    background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.10) 2px, rgba(0,0,0,0.10) 4px);
     pointer-events: none;
   }
   .frame {
-    position: absolute; inset: 24px;
+    position: absolute; inset: 24px; z-index: 1;
     border: 1px solid #1e2a36; border-radius: 12px;
   }
-  .prompt { color: #00ff41; opacity: 0.8; font-size: 26px; }
-  .logo { color: #00ff41; font-size: 112px; font-weight: 700; line-height: 1.05; margin: 18px 0 26px; letter-spacing: -2px; }
+  .tick { position: absolute; z-index: 1; width: 26px; height: 26px; border: 2px solid rgba(0, 255, 65, 0.55); }
+  .tick.tl { top: 24px; left: 24px; border-right: 0; border-bottom: 0; border-radius: 12px 0 0 0; }
+  .tick.tr { top: 24px; right: 24px; border-left: 0; border-bottom: 0; border-radius: 0 12px 0 0; }
+  .tick.bl { bottom: 24px; left: 24px; border-right: 0; border-top: 0; border-radius: 0 0 0 12px; }
+  .tick.br { bottom: 24px; right: 24px; border-left: 0; border-top: 0; border-radius: 0 0 12px 0; }
+  .prompt, .logo, .tagline, .hero, .foot { position: relative; z-index: 3; }
+  .prompt { color: #00ff41; opacity: 0.8; font-size: 26px; letter-spacing: 1px; }
+  .logo { color: #00ff41; font-size: 112px; font-weight: 700; line-height: 1.05; margin: 18px 0 26px; letter-spacing: -2px; text-shadow: 0 0 28px rgba(0, 255, 65, 0.35); }
+  .cursor { display: inline-block; width: 30px; height: 88px; margin-left: 16px; background: #00ff41; box-shadow: 0 0 22px rgba(0, 255, 65, 0.5); vertical-align: 2px; }
   .tagline { color: #e8edf3; font-size: 30px; white-space: nowrap; font-weight: 500; line-height: 1.35; }
-  .hero { color: #c5cdd8; font-size: 28px; line-height: 1.45; margin-top: 22px; max-width: 1000px; }
+  .hero { color: #c5cdd8; font-size: 27px; line-height: 1.45; margin-top: 22px; max-width: 1000px; }
   .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: baseline; font-size: 26px; }
   .domain { color: #00ff41; font-weight: 500; }
   .dim { color: #5a6a7a; }
 </style>
 </head>
 <body>
+  <div class="glow"></div>
+  <div class="grid"></div>
   <div class="frame"></div>
+  <i class="tick tl"></i><i class="tick tr"></i><i class="tick bl"></i><i class="tick br"></i>
   <p class="prompt">$ whoami</p>
-  <p class="logo">jvr0x_</p>
+  <p class="logo">jvr0x<span class="cursor"></span></p>
   <p class="tagline">Javier &bull; priv/acc | Local AI, security, privacy &amp; crypto</p>
   <p class="hero">I run 3&times; DGX Spark and publish open benchmarks, recipes and fine-tunes.</p>
-  <div class="foot"><span class="domain">jvr0x.com</span><span class="dim">models &middot; recipes &middot; benchmarks</span></div>
+  <div class="foot"><span class="domain">jvr0x.com</span><span class="dim">models &middot; recipes &middot; benchmarks &middot; bots</span></div>
 </body>
 </html>

@@ -1,4 +1,5 @@
 # jvr0x.github.io
+![RepoBeagle](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/jvr0x/jvr0x.github.io/repobeagle/badge.json)
 
 Source of [jvr0x.com](https://jvr0x.com): Javier's site about local AI on DGX Spark (models,
 serving recipes, benchmarks, tools, the AGI Checkpoint newsletter) plus the CV at

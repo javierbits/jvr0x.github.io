@@ -148,7 +148,6 @@ a:hover {
   border-radius: 8px;
   border: 2px solid var(--border);
   transition: border-color 0.3s;
-  image-rendering: pixelated;
 }
 
 .hero-avatar img:hover {
@@ -367,7 +366,6 @@ a:hover {
   flex-shrink: 0;
   border-radius: 8px;
   border: 2px solid var(--border);
-  image-rendering: pixelated;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
 

@@ -16,8 +16,8 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@jvr0x">
-<meta name="twitter:creator" content="@jvr0x">
+<meta name="twitter:site" content="@javierbits">
+<meta name="twitter:creator" content="@javierbits">
 <meta name="twitter:title" content="Recipes · jvr0x">
 <meta name="twitter:description" content="Local AI serving recipes for DGX Spark: lmswitch configs for llama.cpp, vLLM and ExLlamaV3, plus the reproducible dgx-spark-bench recipes behind every benchmark.">
 <meta name="twitter:image" content="https://jvr0x.com/assets/og-default.png">
@@ -52,7 +52,7 @@
     <p class="prompt">$ ls ~/recipes/</p>
     <h1>Recipes</h1>
     <p class="lede">How I serve models on DGX Spark. Every config here is real and in use: the
-      <a href="https://github.com/jvr0x/lmswitch" rel="noopener">lmswitch</a> recipes I switch between day to day,
+      <a href="https://github.com/javierbits/lmswitch" rel="noopener">lmswitch</a> recipes I switch between day to day,
       and the reproducible recipe behind every run on the <a href="/dgx-spark-bench/">DGX Spark bench</a>.</p>
     <div class="text-links">
       <a href="#lmswitch">lmswitch recipes</a>
@@ -63,188 +63,188 @@
 
   <section class="section" id="lmswitch">
     <p class="prompt">$ ls ~/ai-models/*.yaml</p>
-    <p class="section-note">lmswitch configs from <a href="https://github.com/jvr0x/ai-models" rel="noopener">jvr0x/ai-models</a>
+    <p class="section-note">lmswitch configs from <a href="https://github.com/javierbits/ai-models" rel="noopener">javierbits/ai-models</a>
       (llama.cpp, vLLM, dual-Spark vLLM and ExLlamaV3 jobs). Each links to its YAML on GitHub.</p>
     <div class="rows">
 <!-- jx:cards recipes list -->
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-0731-ablit-dual.yaml" rel="noopener">DeepSeek-V4-Flash 0731 Abliterated 1M [DUAL 2x SPARK]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-0731-ablit-dual.yaml" rel="noopener">DeepSeek-V4-Flash 0731 Abliterated 1M [DUAL 2x SPARK]</a></h3>
   <p class="row-desc">Keys abliterated DeepSeek-V4-Flash-0731 - TP=2 across spark + gigabyte over CX7 (1M ctx).</p>
   <p class="card-meta">deepseek-v4-flash-0731-ablit-dual.yaml · vllm-dual · drowzeys/keys-DeepSeekV4-Flash-GA-0731-Dspark-Abliterated-32-32</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml" rel="noopener">DeepSeek-V4-Flash 0731 1M [DUAL 2x SPARK]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml" rel="noopener">DeepSeek-V4-Flash 0731 1M [DUAL 2x SPARK]</a></h3>
   <p class="row-desc">DeepSeek V4 Flash 0731 - TP=2 across spark + gigabyte over CX7 (1M ctx).</p>
   <p class="card-meta">deepseek-v4-flash-0731-dual.yaml · vllm-dual · deepseek-ai/DeepSeek-V4-Flash-0731</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-dspark.yaml" rel="noopener">DeepSeek-V4-Flash DSpark 1M [DUAL 2x SPARK]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-dspark.yaml" rel="noopener">DeepSeek-V4-Flash DSpark 1M [DUAL 2x SPARK]</a></h3>
   <p class="row-desc">DeepSeek V4 Flash DSpark - TP=2 across spark + gigabyte over CX7 (1M ctx).</p>
   <p class="card-meta">deepseek-v4-flash-dspark.yaml · vllm-dual · deepseek-ai/DeepSeek-V4-Flash-DSpark</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/diffusiongemma-26b.yaml" rel="noopener">DiffusionGemma-26B-IT</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/diffusiongemma-26b.yaml" rel="noopener">DiffusionGemma-26B-IT</a></h3>
   <p class="card-meta">diffusiongemma-26b.yaml · vllm · nvidia/diffusiongemma-26B-A4B-it-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gemma-4-12b-it-nvfp4.yaml" rel="noopener">Gemma-4-12B-IT NVFP4 (Unsloth)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gemma-4-12b-it-nvfp4.yaml" rel="noopener">Gemma-4-12B-IT NVFP4 (Unsloth)</a></h3>
   <p class="row-desc">Gemma-4-12B-IT NVFP4 (Unsloth) - small-footprint vLLM profile.</p>
   <p class="card-meta">gemma-4-12b-it-nvfp4.yaml · vllm · unsloth/gemma-4-12b-it-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gemma-4-12b-it-qat-mtp.yaml" rel="noopener">Gemma-4-12B-IT QAT Q4 MTP</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gemma-4-12b-it-qat-mtp.yaml" rel="noopener">Gemma-4-12B-IT QAT Q4 MTP</a></h3>
   <p class="row-desc">Gemma-4-12B-IT QAT GGUF (Unsloth) - vision + MTP speculative decoding.</p>
   <p class="card-meta">gemma-4-12b-it-qat-mtp.yaml · llama · unsloth/gemma-4-12B-it-qat-GGUF/gemma-4-12B-it-qat-UD-Q4_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gemma-4-12b-it.yaml" rel="noopener">Gemma-4-12B Instruct</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gemma-4-12b-it.yaml" rel="noopener">Gemma-4-12B Instruct</a></h3>
   <p class="card-meta">gemma-4-12b-it.yaml · llama · unsloth/gemma-4-12b-it-GGUF/gemma-4-12b-it-Q4_K_M.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gemma-4-26b-a4b-it.yaml" rel="noopener">Gemma-4-26B-A4B Instruct</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gemma-4-26b-a4b-it.yaml" rel="noopener">Gemma-4-26B-A4B Instruct</a></h3>
   <p class="card-meta">gemma-4-26b-a4b-it.yaml · vllm · google/gemma-4-26B-A4B-it</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gemma4-31b.yaml" rel="noopener">Gemma-4-31B-IT</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gemma4-31b.yaml" rel="noopener">Gemma-4-31B-IT</a></h3>
   <p class="card-meta">gemma4-31b.yaml · vllm · nvidia/Gemma-4-31B-IT-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gemma4-coder.yaml" rel="noopener">Gemma-4-12B Coder</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gemma4-coder.yaml" rel="noopener">Gemma-4-12B Coder</a></h3>
   <p class="card-meta">gemma4-coder.yaml · llama · yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF/gemma4-coding-Q8_0.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/gpt-oss-20b.yaml" rel="noopener">GPT-OSS-20B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/gpt-oss-20b.yaml" rel="noopener">GPT-OSS-20B</a></h3>
   <p class="card-meta">gpt-oss-20b.yaml · llama · openai/gpt-oss-20b-GGUF/gpt-oss-20b-UD-Q4_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/kimi-linear.yaml" rel="noopener">Kimi-Linear-48B Q8</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/kimi-linear.yaml" rel="noopener">Kimi-Linear-48B Q8</a></h3>
   <p class="card-meta">kimi-linear.yaml · llama · bartowski/moonshotai_Kimi-Linear-48B-A3B-Instruct-GGUF/moonshotai_Kimi-Linear-48B-A3B-Instruct-Q8_0/moonshotai_Kimi-Linear-48B-A3B-Instruct-Q8_0-00001-of-00002.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml" rel="noopener">Mistral-Medium-3.5-128B NVFP4 [BENCH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml" rel="noopener">Mistral-Medium-3.5-128B NVFP4 [BENCH]</a></h3>
   <p class="row-desc">lmswitch BENCH PROFILE of Mistral-Medium-3.5-128B NVFP4 - dense 128B via vLLM.</p>
   <p class="card-meta">mistral-medium-3.5-128b-nvfp4-bench.yaml · vllm · nvidia/Mistral-Medium-3.5-128B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml" rel="noopener">Nemotron-3-Super-120B NVFP4 [BENCH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml" rel="noopener">Nemotron-3-Super-120B NVFP4 [BENCH]</a></h3>
   <p class="row-desc">lmswitch BENCH PROFILE of Nemotron-3-Super-120B-A12B NVFP4 via vLLM (stock image).</p>
   <p class="card-meta">nemotron-3-super-nvfp4-vllm.yaml · vllm · nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nemotron-3-super-nvfp4.yaml" rel="noopener">Nemotron-3-Super-120B NVFP4</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nemotron-3-super-nvfp4.yaml" rel="noopener">Nemotron-3-Super-120B NVFP4</a></h3>
   <p class="row-desc">lmswitch recipe for NVIDIA Nemotron-3-Super-120B-A12B-NVFP4 on 1× DGX Spark.</p>
   <p class="card-meta">nemotron-3-super-nvfp4.yaml · vllm · nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nemotron.yaml" rel="noopener">Nemotron-Nano-30B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nemotron.yaml" rel="noopener">Nemotron-Nano-30B</a></h3>
   <p class="card-meta">nemotron.yaml · llama · nemotron3-gguf/Nemotron-3-Nano-30B-A3B-UD-Q8_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nemotron3-nano-fp8.yaml" rel="noopener">Nemotron-3-Nano-30B FP8</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nemotron3-nano-fp8.yaml" rel="noopener">Nemotron-3-Nano-30B FP8</a></h3>
   <p class="card-meta">nemotron3-nano-fp8.yaml · vllm · nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nemotron3-nano-omni-nvfp4.yaml" rel="noopener">Nemotron-3-Nano Omni NVFP4</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nemotron3-nano-omni-nvfp4.yaml" rel="noopener">Nemotron-3-Nano Omni NVFP4</a></h3>
   <p class="card-meta">nemotron3-nano-omni-nvfp4.yaml · vllm · nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nex-n2-pro.yaml" rel="noopener">Nex-N2-Pro 397B-A17B (IQ1_M)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nex-n2-pro.yaml" rel="noopener">Nex-N2-Pro 397B-A17B (IQ1_M)</a></h3>
   <p class="card-meta">nex-n2-pro.yaml · llama · Nex-N2-Pro-IQ1_M/IQ1_M/Nex-397B-A17B-IQ1_M-00001-of-00005.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/nvidia-nemotron-labs-3-puzzle-75b.yaml" rel="noopener">Nemotron-Labs-3-Puzzle-75B-A9B NVFP4</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/nvidia-nemotron-labs-3-puzzle-75b.yaml" rel="noopener">Nemotron-Labs-3-Puzzle-75B-A9B NVFP4</a></h3>
   <p class="row-desc">lmswitch recipe for NVIDIA Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4 on 1× DGX Spark.</p>
   <p class="card-meta">nvidia-nemotron-labs-3-puzzle-75b.yaml · vllm · nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml" rel="noopener">Ornith-1.0-35B NVFP4 (AEON) [BENCH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml" rel="noopener">Ornith-1.0-35B NVFP4 (AEON) [BENCH]</a></h3>
   <p class="row-desc">lmswitch BENCH PROFILE of Ornith-1.0-35B-AEON NVFP4 - hybrid Mamba/Attention.</p>
   <p class="card-meta">ornith-35b-nvfp4-aeon7.yaml · vllm · AEON-7/Ornith-1.0-35B-AEON-Ultimate-Uncensored-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/ornith-35b-q8.yaml" rel="noopener">Ornith-1.0-35B Q8</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/ornith-35b-q8.yaml" rel="noopener">Ornith-1.0-35B Q8</a></h3>
   <p class="card-meta">ornith-35b-q8.yaml · llama · ornith/Ornith-1.0-35B-Q8_0/ornith-1.0-35b-Q8_0.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen-agentworld-stock.yaml" rel="noopener">Qwen-AgentWorld-35B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen-agentworld-stock.yaml" rel="noopener">Qwen-AgentWorld-35B-A3B</a></h3>
   <p class="card-meta">qwen-agentworld-stock.yaml · vllm · Qwen-AgentWorld-35B-A3B</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3-coder-next.yaml" rel="noopener">Qwen3-Coder-Next Q4</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3-coder-next.yaml" rel="noopener">Qwen3-Coder-Next Q4</a></h3>
   <p class="card-meta">qwen3-coder-next.yaml · llama · unsloth/Qwen3-Coder-Next-GGUF/Qwen3-Coder-Next-UD-Q4_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3-vl-30b.yaml" rel="noopener">Qwen3-VL-30B-A3B Instruct</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3-vl-30b.yaml" rel="noopener">Qwen3-VL-30B-A3B Instruct</a></h3>
   <p class="card-meta">qwen3-vl-30b.yaml · llama · unsloth/Qwen3-VL-30B-A3B-Instruct-GGUF/Qwen3-VL-30B-A3B-Instruct-UD-Q4_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3-vl-8b.yaml" rel="noopener">Qwen3-VL-8B Instruct Q4</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3-vl-8b.yaml" rel="noopener">Qwen3-VL-8B Instruct Q4</a></h3>
   <p class="card-meta">qwen3-vl-8b.yaml · llama · unsloth/Qwen3-VL-8B-Instruct-GGUF/Qwen3-VL-8B-Instruct-UD-Q4_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-aeon7.yaml" rel="noopener">Qwen3.6-27B AEON Uncensored NVFP4 +DFlash</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-aeon7.yaml" rel="noopener">Qwen3.6-27B AEON Uncensored NVFP4 +DFlash</a></h3>
   <p class="card-meta">qwen3.6-27b-nvfp4-aeon7.yaml · vllm · AEON-7/Qwen3.6-27B-AEON-Ultimate-Uncensored-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-miaai.yaml" rel="noopener">Qwen3.6-27B NVFP4 (MiaAI-Lab repo config)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-miaai.yaml" rel="noopener">Qwen3.6-27B NVFP4 (MiaAI-Lab repo config)</a></h3>
   <p class="row-desc">Faithful port of MiaAI-Lab/Qwen3.6-27B-NVFP4-vLLM start.sh, as a lmswitch recipe.</p>
   <p class="card-meta">qwen3.6-27b-nvfp4-miaai.yaml · vllm · nvidia/Qwen3.6-27B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml" rel="noopener">Qwen3.6-27B NVFP4 (Unsloth) [BENCH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml" rel="noopener">Qwen3.6-27B NVFP4 (Unsloth) [BENCH]</a></h3>
   <p class="row-desc">lmswitch BENCH PROFILE of qwen3.6-27b-nvfp4-unsloth - local NVFP4 dense hybrid VLM.</p>
   <p class="card-meta">qwen3.6-27b-nvfp4-unsloth-bench.yaml · vllm · unsloth/Qwen3.6-27B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth.yaml" rel="noopener">Qwen3.6-27B NVFP4 [UNSLOTH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth.yaml" rel="noopener">Qwen3.6-27B NVFP4 [UNSLOTH]</a></h3>
   <p class="row-desc">lmswitch recipe for Qwen3.6-27B-NVFP4 (unsloth) on 1× DGX Spark.</p>
   <p class="card-meta">qwen3.6-27b-nvfp4-unsloth.yaml · vllm · unsloth/Qwen3.6-27B-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-a3b-nvfp4-fast.yaml" rel="noopener">Qwen3.6-35B-A3B NVFP4-Fast [UNSLOTH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-a3b-nvfp4-fast.yaml" rel="noopener">Qwen3.6-35B-A3B NVFP4-Fast [UNSLOTH]</a></h3>
   <p class="row-desc">lmswitch recipe for Qwen3.6-35B-A3B-NVFP4-Fast (unsloth) on 1× DGX Spark.</p>
   <p class="card-meta">qwen3.6-35b-a3b-nvfp4-fast.yaml · vllm · unsloth/Qwen3.6-35B-A3B-NVFP4-Fast</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-heretic-dflash-aeon7.yaml" rel="noopener">Qwen3.6-35B heretic NVFP4 +DFlash</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-heretic-dflash-aeon7.yaml" rel="noopener">Qwen3.6-35B heretic NVFP4 +DFlash</a></h3>
   <p class="card-meta">qwen3.6-35b-heretic-dflash-aeon7.yaml · vllm · AEON-7/Qwen3.6-35B-A3B-heretic-NVFP4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml" rel="noopener">Qwen3.6-35B-A3B NVFP4 Fast (Unsloth) [BENCH]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml" rel="noopener">Qwen3.6-35B-A3B NVFP4 Fast (Unsloth) [BENCH]</a></h3>
   <p class="row-desc">lmswitch BENCH PROFILE of qwen3.6-35b-nvfp4-unsloth-fast - local NVFP4 MoE hybrid.</p>
   <p class="card-meta">qwen3.6-35b-nvfp4-fast.yaml · vllm · unsloth/Qwen3.6-35B-A3B-NVFP4-Fast</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-nvfp4-nvidia-aeon7.yaml" rel="noopener">Qwen3.6-35B-A3B NVFP4 (NVIDIA)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-nvfp4-nvidia-aeon7.yaml" rel="noopener">Qwen3.6-35B-A3B NVFP4 (NVIDIA)</a></h3>
   <p class="card-meta">qwen3.6-35b-nvfp4-nvidia-aeon7.yaml · vllm · nvidia/qwen3.6-35b-a3b-nvfp4</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-q8-mtp.yaml" rel="noopener">Qwen3.6-35B-A3B Q8 MTP</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-q8-mtp.yaml" rel="noopener">Qwen3.6-35B-A3B Q8 MTP</a></h3>
   <p class="card-meta">qwen3.6-35b-q8-mtp.yaml · llama · unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q8_K_XL.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-distill-q8.yaml" rel="noopener">Qwen3.6-35B Distilled Q8</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-distill-q8.yaml" rel="noopener">Qwen3.6-35B Distilled Q8</a></h3>
   <p class="card-meta">qwen3.6-distill-q8.yaml · llama · lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-Q8_0-GGUF/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled.Q8_0.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-distill.yaml" rel="noopener">Qwen3.6-35B Distilled</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-distill.yaml" rel="noopener">Qwen3.6-35B Distilled</a></h3>
   <p class="card-meta">qwen3.6-distill.yaml · llama · lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-IQ4_XS-GGUF/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled.IQ4_XS.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-kimi-distill.yaml" rel="noopener">Qwen3.6-35B Kimi-K2.6 Distilled Q8</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-kimi-distill.yaml" rel="noopener">Qwen3.6-35B Kimi-K2.6 Distilled Q8</a></h3>
   <p class="card-meta">qwen3.6-kimi-distill.yaml · llama · lordx64/Qwen3.6-35B-A3B-Kimi-K2.6-Reasoning-Distilled-GGUF/Qwen3.6-35B-A3B-Kimi-K2.6-Reasoning-Distilled.Q8_0.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/qwopus3.6-coder.yaml" rel="noopener">Qwopus3.6-27B Coder MTP (Q8_0)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/qwopus3.6-coder.yaml" rel="noopener">Qwopus3.6-27B Coder MTP (Q8_0)</a></h3>
   <p class="card-meta">qwopus3.6-coder.yaml · llama · Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF/Qwopus3.6-27B-Coder-MTP-Q8_0.gguf</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/red-snow-exl3-sage-dual.yaml" rel="noopener">RED-SNOW-5.3-FLASH EXL3-SAGE 4.91bpw [DUAL 2x SPARK job]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/red-snow-exl3-sage-dual.yaml" rel="noopener">RED-SNOW-5.3-FLASH EXL3-SAGE 4.91bpw [DUAL 2x SPARK job]</a></h3>
   <p class="row-desc">lmswitch job for RED-SNOW-5.3-FLASH EXL3 SAGE 4.91bpw across spark + gigabyte.</p>
   <p class="card-meta">red-snow-exl3-sage-dual.yaml · exllamav3-dual · vcruz305/RED-SNOW-5.3-FLASH-EXL3-SAGE-4.91bpw</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/ai-models/blob/main/step-3.7-flash.yaml" rel="noopener">Step-3.7-Flash (IQ4_XS)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/ai-models/blob/main/step-3.7-flash.yaml" rel="noopener">Step-3.7-Flash (IQ4_XS)</a></h3>
   <p class="card-meta">step-3.7-flash.yaml · llama · unsloth/Step-3.7-Flash-GGUF/UD-IQ4_XS/Step-3.7-Flash-UD-IQ4_XS-00001-of-00003.gguf</p>
 </div>
 <!-- /jx:cards -->
@@ -256,7 +256,7 @@
     <div class="cards">
 <!-- jx:cards recipe-forks -->
 <div class="card fade-in">
-  <h3 class="card-title"><a href="https://github.com/jvr0x/DeepSeek-V4.1-Flash-EXL3-DGX-Spark-recipe" rel="noopener">DeepSeek-V4.1-Flash EXL3 on one DGX Spark</a></h3>
+  <h3 class="card-title"><a href="https://github.com/javierbits/DeepSeek-V4.1-Flash-EXL3-DGX-Spark-recipe" rel="noopener">DeepSeek-V4.1-Flash EXL3 on one DGX Spark</a></h3>
   <p class="card-desc">Serving DeepSeek-V4.1-Flash as EXL3 on a single DGX Spark, about 17.5 tok/s with the DSpark drafter.</p>
   <p class="card-meta">fork · ExLlamaV3 · 1× DGX Spark</p>
   <div class="tags"><span class="tag sm">DeepSeek</span><span class="tag sm">EXL3</span><span class="tag sm">Speculative decoding</span></div>
@@ -272,12 +272,12 @@
     <div class="rows">
 <!-- jx:cards bench-recipes list -->
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-0731-dual" rel="noopener">DeepSeek-V4-Flash 0731 1M [DUAL 2xSpark]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-0731-dual" rel="noopener">DeepSeek-V4-Flash 0731 1M [DUAL 2xSpark]</a></h3>
   <p class="card-meta">NVFP4-DS-MLA KV + b12x MoE + DSpark spec-decode (K=5) · vLLM 0.25.2.dev0+g752a3a504 (Anemll dspark-vllm-gx10 0.1.1, TP=2)</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml" rel="noopener">lmswitch: deepseek-v4-flash-0731-dual.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml" rel="noopener">lmswitch: deepseek-v4-flash-0731-dual.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-dspark-dual" rel="noopener">DeepSeek-V4-Flash DSpark 1M [DUAL 2xSpark]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-dspark-dual" rel="noopener">DeepSeek-V4-Flash DSpark 1M [DUAL 2xSpark]</a></h3>
   <p class="card-meta">NVFP4-DS-MLA KV + b12x MoE + DSpark spec-decode · vLLM 0.25 (Anemll dspark-vllm-gx10, TP=2)</p>
 </div>
 <div class="row">
@@ -286,19 +286,19 @@
   <p class="card-meta">EXL3 3.0 bpw (0xSero spark build) · sparkinfer (vLLM 26.02 base)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-spark-q3-llamacpp" rel="noopener">DeepSeek-V4-Flash-Spark</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-spark-q3-llamacpp" rel="noopener">DeepSeek-V4-Flash-Spark</a></h3>
   <p class="card-meta">GGUF Q3 REAP · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gemma-4-12b-it-llamacpp" rel="noopener">Gemma-4-12B-IT</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gemma-4-12b-it-llamacpp" rel="noopener">Gemma-4-12B-IT</a></h3>
   <p class="card-meta">GGUF Q4_K_M · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gemma-4-26b-a4b-bf16" rel="noopener">Gemma-4-26B-A4B-IT</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gemma-4-26b-a4b-bf16" rel="noopener">Gemma-4-26B-A4B-IT</a></h3>
   <p class="card-meta">BF16 · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gemma-4-31b-nvfp4" rel="noopener">Gemma-4-31B-IT</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gemma-4-31b-nvfp4" rel="noopener">Gemma-4-31B-IT</a></h3>
   <p class="card-meta">NVFP4 · vLLM 0.23</p>
 </div>
 <div class="row">
@@ -307,11 +307,11 @@
   <p class="card-meta">EXL3 K2 (2-bit routed experts, ~91 GiB pack) · vLLM + vllm-exl3 0.3.1 (Cruz prebuilt venv)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gpt-oss-20b-llamacpp" rel="noopener">GPT-OSS-20B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gpt-oss-20b-llamacpp" rel="noopener">GPT-OSS-20B</a></h3>
   <p class="card-meta">GGUF Q4_K_XL · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/kimi-linear-48b-q8-llamacpp" rel="noopener">Kimi-Linear-48B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/kimi-linear-48b-q8-llamacpp" rel="noopener">Kimi-Linear-48B-A3B</a></h3>
   <p class="card-meta">GGUF Q8_0 · llama.cpp</p>
 </div>
 <div class="row">
@@ -320,121 +320,121 @@
   <p class="card-meta">FP8 · vLLM</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-dual" rel="noopener">Laguna-S-2.1 [DUAL 2x SPARK]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-dual" rel="noopener">Laguna-S-2.1 [DUAL 2x SPARK]</a></h3>
   <p class="card-meta">NVFP4 + DFlash · vLLM (TP=2, native --nnodes 2)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-nspec15" rel="noopener">Laguna-S-2.1 [nspec=15]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-nspec15" rel="noopener">Laguna-S-2.1 [nspec=15]</a></h3>
   <p class="card-meta">NVFP4 + DFlash (15 tok, untuned) · vLLM</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4" rel="noopener">Laguna-S-2.1</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4" rel="noopener">Laguna-S-2.1</a></h3>
   <p class="card-meta">NVFP4 + DFlash · vLLM</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/mimo-v25-dual" rel="noopener">MiMo-V2.5 Omni [DUAL 2xSpark]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/mimo-v25-dual" rel="noopener">MiMo-V2.5 Omni [DUAL 2xSpark]</a></h3>
   <p class="card-meta">NVFP4 + NVFP4-KV + MTP1 · vLLM (vllm-dual-ray, Ray TP=2)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/minimax-m3-dual" rel="noopener">MiniMax-M3 428B [DUAL 2xSpark]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/minimax-m3-dual" rel="noopener">MiniMax-M3 428B [DUAL 2xSpark]</a></h3>
   <p class="card-meta">W4A16 GPTQ + NVFP4-KV (b12x) + EAGLE3 · vLLM (vllm-dual, TP=2)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/mistral-medium-3.5-128b-nvfp4-bench" rel="noopener">Mistral-Medium-3.5-128B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/mistral-medium-3.5-128b-nvfp4-bench" rel="noopener">Mistral-Medium-3.5-128B</a></h3>
   <p class="card-meta">NVFP4 · vLLM</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml" rel="noopener">lmswitch: mistral-medium-3.5-128b-nvfp4-bench.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml" rel="noopener">lmswitch: mistral-medium-3.5-128b-nvfp4-bench.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron-3-super-nvfp4-vllm" rel="noopener">Nemotron-3-Super-120B-A12B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron-3-super-nvfp4-vllm" rel="noopener">Nemotron-3-Super-120B-A12B</a></h3>
   <p class="card-meta">NVFP4 + MTP · vLLM</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml" rel="noopener">lmswitch: nemotron-3-super-nvfp4-vllm.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml" rel="noopener">lmswitch: nemotron-3-super-nvfp4-vllm.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron-labs-3-puzzle-75b-nvfp4-aeon7" rel="noopener">Nemotron-Labs-3-Puzzle-75B-A9B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron-labs-3-puzzle-75b-nvfp4-aeon7" rel="noopener">Nemotron-Labs-3-Puzzle-75B-A9B</a></h3>
   <p class="card-meta">NVFP4 + MTP · vLLM 0.23 (AEON)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-fp8" rel="noopener">Nemotron-3-Nano-30B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-fp8" rel="noopener">Nemotron-3-Nano-30B-A3B</a></h3>
   <p class="card-meta">FP8 · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-q8-llamacpp" rel="noopener">Nemotron-3-Nano-30B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-q8-llamacpp" rel="noopener">Nemotron-3-Nano-30B-A3B</a></h3>
   <p class="card-meta">GGUF Q8_K_XL · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron3-nano-omni-nvfp4-vllm" rel="noopener">Nemotron-3-Nano-Omni-30B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron3-nano-omni-nvfp4-vllm" rel="noopener">Nemotron-3-Nano-Omni-30B-A3B</a></h3>
   <p class="card-meta">NVFP4 · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nex-n2-pro-iq1m-llamacpp" rel="noopener">Nex-N2-Pro-397B-A17B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nex-n2-pro-iq1m-llamacpp" rel="noopener">Nex-N2-Pro-397B-A17B</a></h3>
   <p class="card-meta">GGUF IQ1_M · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/ornith-35b-nvfp4-aeon7" rel="noopener">Ornith-1.0-35B-AEON</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/ornith-35b-nvfp4-aeon7" rel="noopener">Ornith-1.0-35B-AEON</a></h3>
   <p class="card-meta">NVFP4-mixed (compressed-tensors) · vLLM 0.23 (AEON)</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml" rel="noopener">lmswitch: ornith-35b-nvfp4-aeon7.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml" rel="noopener">lmswitch: ornith-35b-nvfp4-aeon7.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/ornith-35b-q8" rel="noopener">Ornith-1.0-35B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/ornith-35b-q8" rel="noopener">Ornith-1.0-35B</a></h3>
   <p class="card-meta">GGUF Q8_0 · llama.cpp</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/ornith-35b-q8.yaml" rel="noopener">lmswitch: ornith-35b-q8.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/ornith-35b-q8.yaml" rel="noopener">lmswitch: ornith-35b-q8.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen-agentworld-35b-bf16" rel="noopener">Qwen-AgentWorld-35B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen-agentworld-35b-bf16" rel="noopener">Qwen-AgentWorld-35B-A3B</a></h3>
   <p class="card-meta">BF16 · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3-coder-next-q4-llamacpp" rel="noopener">Qwen3-Coder-Next-80B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3-coder-next-q4-llamacpp" rel="noopener">Qwen3-Coder-Next-80B-A3B</a></h3>
   <p class="card-meta">GGUF Q4_K_XL · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.5-397b-gguf-dual" rel="noopener">Qwen3.5-397B-A17B [DUAL 2xSpark]</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.5-397b-gguf-dual" rel="noopener">Qwen3.5-397B-A17B [DUAL 2xSpark]</a></h3>
   <p class="card-meta">GGUF UD-IQ4_NL · llama.cpp (RPC, 2 nodes)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-aeon7-bench" rel="noopener">Qwen3.6-27B-AEON</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-aeon7-bench" rel="noopener">Qwen3.6-27B-AEON</a></h3>
   <p class="card-meta">NVFP4-mixed (compressed-tensors) · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-miaai-bench" rel="noopener">Qwen3.6-27B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-miaai-bench" rel="noopener">Qwen3.6-27B</a></h3>
   <p class="card-meta">NVFP4 · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-nvidia" rel="noopener">Qwen3.6-27B-NVFP4</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-nvidia" rel="noopener">Qwen3.6-27B-NVFP4</a></h3>
   <p class="card-meta">NVFP4-mixed (dense hybrid) · vLLM 0.23 (AEON)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-unsloth" rel="noopener">Qwen3.6-27B-NVFP4 (Unsloth)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-unsloth" rel="noopener">Qwen3.6-27B-NVFP4 (Unsloth)</a></h3>
   <p class="card-meta">NVFP4-mixed (dense hybrid) · vLLM 0.23 (AEON)</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml" rel="noopener">lmswitch: qwen3.6-27b-nvfp4-unsloth-bench.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml" rel="noopener">lmswitch: qwen3.6-27b-nvfp4-unsloth-bench.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-heretic-dflash-bench" rel="noopener">Qwen3.6-35B-heretic</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-heretic-dflash-bench" rel="noopener">Qwen3.6-35B-heretic</a></h3>
   <p class="card-meta">NVFP4-mixed (compressed-tensors) · vLLM 0.23</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-specoff" rel="noopener">Qwen3.6-35B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-specoff" rel="noopener">Qwen3.6-35B-A3B</a></h3>
   <p class="card-meta">NVFP4-mixed (spec OFF) · vLLM 0.23 (AEON)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-nvidia" rel="noopener">Qwen3.6-35B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-nvidia" rel="noopener">Qwen3.6-35B-A3B</a></h3>
   <p class="card-meta">NVFP4-mixed +MTP · vLLM 0.23 (AEON)</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-unsloth-fast" rel="noopener">Qwen3.6-35B-A3B-NVFP4-Fast (Unsloth)</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-unsloth-fast" rel="noopener">Qwen3.6-35B-A3B-NVFP4-Fast (Unsloth)</a></h3>
   <p class="card-meta">NVFP4-mixed (MoE hybrid) · vLLM 0.23 (AEON)</p>
-  <div class="card-links"><a href="https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml" rel="noopener">lmswitch: qwen3.6-35b-nvfp4-fast.yaml</a></div>
+  <div class="card-links"><a href="https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml" rel="noopener">lmswitch: qwen3.6-35b-nvfp4-fast.yaml</a></div>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q4-llamacpp" rel="noopener">Qwen3.6-35B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q4-llamacpp" rel="noopener">Qwen3.6-35B-A3B</a></h3>
   <p class="card-meta">GGUF Q4_K_XL · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q8-llamacpp" rel="noopener">Qwen3.6-35B-A3B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q8-llamacpp" rel="noopener">Qwen3.6-35B-A3B</a></h3>
   <p class="card-meta">GGUF Q8_K_XL · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.8-27b-nvfp4-sglang" rel="noopener">Qwen3.8-27B</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.8-27b-nvfp4-sglang" rel="noopener">Qwen3.8-27B</a></h3>
   <p class="card-meta">NVFP4-mixed (ModelOpt) · SGLang nightly-dev-20260814-c4271c3f</p>
 </div>
 <div class="row">
@@ -443,15 +443,15 @@
   <p class="card-meta">NVFP4 (Mia-AiLab) · vLLM qwen38-flash-next image</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwopus3.6-27b-coder-q8-llamacpp" rel="noopener">Qwopus3.6-27B-Coder</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwopus3.6-27b-coder-q8-llamacpp" rel="noopener">Qwopus3.6-27B-Coder</a></h3>
   <p class="card-meta">GGUF Q8_0 · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/step-3.7-flash-llamacpp" rel="noopener">Step-3.7-Flash</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/step-3.7-flash-llamacpp" rel="noopener">Step-3.7-Flash</a></h3>
   <p class="card-meta">GGUF IQ4_XS · llama.cpp</p>
 </div>
 <div class="row">
-  <h3 class="row-title"><a href="https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/superqwen3.8-27b-ablit-nvfp4" rel="noopener">SuperQwen3.8-27B-abliterated</a></h3>
+  <h3 class="row-title"><a href="https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/superqwen3.8-27b-ablit-nvfp4" rel="noopener">SuperQwen3.8-27B-abliterated</a></h3>
   <p class="card-meta">NVFP4 W4A4 group-16 (ModelOpt) · vLLM (anemll dspark-vllm-gx10 0.1.1)</p>
 </div>
 <!-- /jx:cards -->
@@ -462,11 +462,11 @@
 <!-- jx:footer -->
 <footer class="jx-footer">
   <div class="jx-footer-links">
-    <a href="https://x.com/jvr0x" rel="noopener">@jvr0x on&nbsp;X</a>
-    <a href="https://github.com/jvr0x" rel="noopener">github</a>
-    <a href="https://huggingface.co/jvr0x" rel="noopener">huggingface</a>
+    <a href="https://x.com/javierbits" rel="noopener">@javierbits on&nbsp;X</a>
+    <a href="https://github.com/javierbits" rel="noopener">github</a>
+    <a href="https://huggingface.co/javierbits" rel="noopener">huggingface</a>
     <a href="https://agicheckpoint.com" rel="noopener">agicheckpoint.com</a>
-    <a href="https://ko-fi.com/jvr0x" rel="noopener">support me</a>
+    <a href="https://ko-fi.com/javierbits" rel="noopener">support me</a>
   </div>
   <p class="jx-sig">Javier &bull; priv/acc | Local AI, security, privacy &amp; crypto</p>
 </footer>

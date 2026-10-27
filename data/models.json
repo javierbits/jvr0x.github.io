@@ -2,7 +2,7 @@
   {
     "hf": "Javi0.3-4B-EXL3",
     "title": "Javi0.3-4B-EXL3",
-    "url": "https://huggingface.co/jvr0x/Javi0.3-4B-EXL3",
+    "url": "https://huggingface.co/javierbits/Javi0.3-4B-EXL3",
     "description": "EXL3 build of Javi0.3-4B. Quantised on one DGX Spark.",
     "meta": "EXL3 · 5-bit · base Javi0.3-4B · apache-2.0",
     "tags": [
@@ -14,14 +14,14 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Javi0.3-4B-EXL3"
+        "url": "https://huggingface.co/javierbits/Javi0.3-4B-EXL3"
       }
     ]
   },
   {
     "hf": "Javi0.3-2B-GGUF",
     "title": "Javi0.3-2B-GGUF",
-    "url": "https://huggingface.co/jvr0x/Javi0.3-2B-GGUF",
+    "url": "https://huggingface.co/javierbits/Javi0.3-2B-GGUF",
     "description": "GGUF fine-tune of Qwen/Qwen3.5-2B. LoRA-tuned with Unsloth for agent tool use. Trained on one DGX Spark.",
     "meta": "GGUF · Q4_K_M / Q8_0 · base Qwen/Qwen3.5-2B · apache-2.0",
     "tags": [
@@ -33,14 +33,14 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Javi0.3-2B-GGUF"
+        "url": "https://huggingface.co/javierbits/Javi0.3-2B-GGUF"
       }
     ]
   },
   {
     "hf": "Javi0.3-2B",
     "title": "Javi0.3-2B",
-    "url": "https://huggingface.co/jvr0x/Javi0.3-2B",
+    "url": "https://huggingface.co/javierbits/Javi0.3-2B",
     "description": "Safetensors fine-tune of Qwen/Qwen3.5-2B. LoRA-tuned with Unsloth for agent tool use. Takes text and image inputs. Trained on one DGX Spark.",
     "meta": "Safetensors · base Qwen/Qwen3.5-2B · apache-2.0",
     "tags": [
@@ -52,14 +52,14 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Javi0.3-2B"
+        "url": "https://huggingface.co/javierbits/Javi0.3-2B"
       }
     ]
   },
   {
     "hf": "Javi0.3-4B-GGUF",
     "title": "Javi0.3-4B-GGUF",
-    "url": "https://huggingface.co/jvr0x/Javi0.3-4B-GGUF",
+    "url": "https://huggingface.co/javierbits/Javi0.3-4B-GGUF",
     "description": "GGUF fine-tune of Qwen/Qwen3.5-4B. LoRA-tuned with Unsloth for agent tool use. Trained on one DGX Spark.",
     "meta": "GGUF · Q4_K_M / Q8_0 · base Qwen/Qwen3.5-4B · apache-2.0",
     "tags": [
@@ -71,14 +71,14 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Javi0.3-4B-GGUF"
+        "url": "https://huggingface.co/javierbits/Javi0.3-4B-GGUF"
       }
     ]
   },
   {
     "hf": "Javi0.3-4B",
     "title": "Javi0.3-4B",
-    "url": "https://huggingface.co/jvr0x/Javi0.3-4B",
+    "url": "https://huggingface.co/javierbits/Javi0.3-4B",
     "description": "Safetensors fine-tune of Qwen/Qwen3.5-4B. LoRA-tuned with Unsloth for agent tool use. Takes text and image inputs. Trained on one DGX Spark.",
     "meta": "Safetensors · base Qwen/Qwen3.5-4B · apache-2.0",
     "tags": [
@@ -90,14 +90,14 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Javi0.3-4B"
+        "url": "https://huggingface.co/javierbits/Javi0.3-4B"
       }
     ]
   },
   {
     "hf": "Javi0.2-4B-GGUF",
     "title": "Javi0.2-4B (alpha)",
-    "url": "https://huggingface.co/jvr0x/Javi0.2-4B-GGUF",
+    "url": "https://huggingface.co/javierbits/Javi0.2-4B-GGUF",
     "description": "A 4B agent model fine-tuned from Qwen3.5-4B to look things up instead of guessing, say so when it can't verify, and reason from first principles. Trained on one DGX Spark.",
     "meta": "GGUF · Q8_0 / Q4_K_M · base Qwen3.5-4B",
     "tags": [
@@ -108,18 +108,18 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Javi0.2-4B-GGUF"
+        "url": "https://huggingface.co/javierbits/Javi0.2-4B-GGUF"
       },
       {
         "label": "write-up on X",
-        "url": "https://x.com/jvr0x/status/2103182873268244639"
+        "url": "https://x.com/javierbits/status/2103182873268244639"
       }
     ]
   },
   {
     "hf": "Qwen3-4B-Pirate-GGUF",
     "title": "Qwen3-4B Pirate",
-    "url": "https://huggingface.co/jvr0x/Qwen3-4B-Pirate-GGUF",
+    "url": "https://huggingface.co/javierbits/Qwen3-4B-Pirate-GGUF",
     "description": "Qwen3-4B-Instruct-2507 fine-tuned to answer everything in heavy pirate dialect, no system prompt needed. LoRA trained in 7m20s on one DGX Spark with Unsloth; 74.5 tok/s at Q4_K_M on Spark.",
     "meta": "GGUF · Q4_K_M · base Qwen3-4B-Instruct-2507",
     "tags": [
@@ -130,11 +130,11 @@
     "links": [
       {
         "label": "Hugging Face",
-        "url": "https://huggingface.co/jvr0x/Qwen3-4B-Pirate-GGUF"
+        "url": "https://huggingface.co/javierbits/Qwen3-4B-Pirate-GGUF"
       },
       {
         "label": "write-up on X",
-        "url": "https://x.com/jvr0x/status/2102364361998188575"
+        "url": "https://x.com/javierbits/status/2102364361998188575"
       }
     ]
   }

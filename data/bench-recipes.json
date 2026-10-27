@@ -2,19 +2,19 @@
   {
     "id": "deepseek-v4-flash-0731-dual",
     "title": "DeepSeek-V4-Flash 0731 1M [DUAL 2xSpark]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-0731-dual",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-0731-dual",
     "meta": "NVFP4-DS-MLA KV + b12x MoE + DSpark spec-decode (K=5) · vLLM 0.25.2.dev0+g752a3a504 (Anemll dspark-vllm-gx10 0.1.1, TP=2)",
     "links": [
       {
         "label": "lmswitch: deepseek-v4-flash-0731-dual.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml"
       }
     ]
   },
   {
     "id": "deepseek-v4-flash-dspark-dual",
     "title": "DeepSeek-V4-Flash DSpark 1M [DUAL 2xSpark]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-dspark-dual",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-dspark-dual",
     "meta": "NVFP4-DS-MLA KV + b12x MoE + DSpark spec-decode · vLLM 0.25 (Anemll dspark-vllm-gx10, TP=2)"
   },
   {
@@ -27,25 +27,25 @@
   {
     "id": "deepseek-v4-flash-spark-q3-llamacpp",
     "title": "DeepSeek-V4-Flash-Spark",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-spark-q3-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/deepseek-v4-flash-spark-q3-llamacpp",
     "meta": "GGUF Q3 REAP · llama.cpp"
   },
   {
     "id": "gemma-4-12b-it-llamacpp",
     "title": "Gemma-4-12B-IT",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gemma-4-12b-it-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gemma-4-12b-it-llamacpp",
     "meta": "GGUF Q4_K_M · llama.cpp"
   },
   {
     "id": "gemma-4-26b-a4b-bf16",
     "title": "Gemma-4-26B-A4B-IT",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gemma-4-26b-a4b-bf16",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gemma-4-26b-a4b-bf16",
     "meta": "BF16 · vLLM 0.23"
   },
   {
     "id": "gemma-4-31b-nvfp4",
     "title": "Gemma-4-31B-IT",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gemma-4-31b-nvfp4",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gemma-4-31b-nvfp4",
     "meta": "NVFP4 · vLLM 0.23"
   },
   {
@@ -58,13 +58,13 @@
   {
     "id": "gpt-oss-20b-llamacpp",
     "title": "GPT-OSS-20B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/gpt-oss-20b-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/gpt-oss-20b-llamacpp",
     "meta": "GGUF Q4_K_XL · llama.cpp"
   },
   {
     "id": "kimi-linear-48b-q8-llamacpp",
     "title": "Kimi-Linear-48B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/kimi-linear-48b-q8-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/kimi-linear-48b-q8-llamacpp",
     "meta": "GGUF Q8_0 · llama.cpp"
   },
   {
@@ -77,205 +77,205 @@
   {
     "id": "laguna-s-2.1-nvfp4-dual",
     "title": "Laguna-S-2.1 [DUAL 2x SPARK]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-dual",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-dual",
     "meta": "NVFP4 + DFlash · vLLM (TP=2, native --nnodes 2)"
   },
   {
     "id": "laguna-s-2.1-nvfp4-nspec15",
     "title": "Laguna-S-2.1 [nspec=15]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-nspec15",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4-nspec15",
     "meta": "NVFP4 + DFlash (15 tok, untuned) · vLLM"
   },
   {
     "id": "laguna-s-2.1-nvfp4",
     "title": "Laguna-S-2.1",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/laguna-s-2.1-nvfp4",
     "meta": "NVFP4 + DFlash · vLLM"
   },
   {
     "id": "mimo-v25-dual",
     "title": "MiMo-V2.5 Omni [DUAL 2xSpark]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/mimo-v25-dual",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/mimo-v25-dual",
     "meta": "NVFP4 + NVFP4-KV + MTP1 · vLLM (vllm-dual-ray, Ray TP=2)"
   },
   {
     "id": "minimax-m3-dual",
     "title": "MiniMax-M3 428B [DUAL 2xSpark]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/minimax-m3-dual",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/minimax-m3-dual",
     "meta": "W4A16 GPTQ + NVFP4-KV (b12x) + EAGLE3 · vLLM (vllm-dual, TP=2)"
   },
   {
     "id": "mistral-medium-3.5-128b-nvfp4-bench",
     "title": "Mistral-Medium-3.5-128B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/mistral-medium-3.5-128b-nvfp4-bench",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/mistral-medium-3.5-128b-nvfp4-bench",
     "meta": "NVFP4 · vLLM",
     "links": [
       {
         "label": "lmswitch: mistral-medium-3.5-128b-nvfp4-bench.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml"
       }
     ]
   },
   {
     "id": "nemotron-3-super-nvfp4-vllm",
     "title": "Nemotron-3-Super-120B-A12B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron-3-super-nvfp4-vllm",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron-3-super-nvfp4-vllm",
     "meta": "NVFP4 + MTP · vLLM",
     "links": [
       {
         "label": "lmswitch: nemotron-3-super-nvfp4-vllm.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml"
       }
     ]
   },
   {
     "id": "nemotron-labs-3-puzzle-75b-nvfp4-aeon7",
     "title": "Nemotron-Labs-3-Puzzle-75B-A9B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron-labs-3-puzzle-75b-nvfp4-aeon7",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron-labs-3-puzzle-75b-nvfp4-aeon7",
     "meta": "NVFP4 + MTP · vLLM 0.23 (AEON)"
   },
   {
     "id": "nemotron3-nano-30b-fp8",
     "title": "Nemotron-3-Nano-30B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-fp8",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-fp8",
     "meta": "FP8 · vLLM 0.23"
   },
   {
     "id": "nemotron3-nano-30b-q8-llamacpp",
     "title": "Nemotron-3-Nano-30B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-q8-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron3-nano-30b-q8-llamacpp",
     "meta": "GGUF Q8_K_XL · llama.cpp"
   },
   {
     "id": "nemotron3-nano-omni-nvfp4-vllm",
     "title": "Nemotron-3-Nano-Omni-30B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nemotron3-nano-omni-nvfp4-vllm",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nemotron3-nano-omni-nvfp4-vllm",
     "meta": "NVFP4 · vLLM 0.23"
   },
   {
     "id": "nex-n2-pro-iq1m-llamacpp",
     "title": "Nex-N2-Pro-397B-A17B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/nex-n2-pro-iq1m-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/nex-n2-pro-iq1m-llamacpp",
     "meta": "GGUF IQ1_M · llama.cpp"
   },
   {
     "id": "ornith-35b-nvfp4-aeon7",
     "title": "Ornith-1.0-35B-AEON",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/ornith-35b-nvfp4-aeon7",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/ornith-35b-nvfp4-aeon7",
     "meta": "NVFP4-mixed (compressed-tensors) · vLLM 0.23 (AEON)",
     "links": [
       {
         "label": "lmswitch: ornith-35b-nvfp4-aeon7.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml"
       }
     ]
   },
   {
     "id": "ornith-35b-q8-llamacpp",
     "title": "Ornith-1.0-35B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/ornith-35b-q8",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/ornith-35b-q8",
     "meta": "GGUF Q8_0 · llama.cpp",
     "links": [
       {
         "label": "lmswitch: ornith-35b-q8.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/ornith-35b-q8.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/ornith-35b-q8.yaml"
       }
     ]
   },
   {
     "id": "qwen-agentworld-35b-bf16",
     "title": "Qwen-AgentWorld-35B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen-agentworld-35b-bf16",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen-agentworld-35b-bf16",
     "meta": "BF16 · vLLM 0.23"
   },
   {
     "id": "qwen3-coder-next-q4-llamacpp",
     "title": "Qwen3-Coder-Next-80B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3-coder-next-q4-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3-coder-next-q4-llamacpp",
     "meta": "GGUF Q4_K_XL · llama.cpp"
   },
   {
     "id": "qwen3.5-397b-gguf-dual",
     "title": "Qwen3.5-397B-A17B [DUAL 2xSpark]",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.5-397b-gguf-dual",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.5-397b-gguf-dual",
     "meta": "GGUF UD-IQ4_NL · llama.cpp (RPC, 2 nodes)"
   },
   {
     "id": "qwen3.6-27b-nvfp4-aeon7-bench",
     "title": "Qwen3.6-27B-AEON",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-aeon7-bench",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-aeon7-bench",
     "meta": "NVFP4-mixed (compressed-tensors) · vLLM 0.23"
   },
   {
     "id": "qwen3.6-27b-nvfp4-miaai-bench",
     "title": "Qwen3.6-27B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-miaai-bench",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-miaai-bench",
     "meta": "NVFP4 · vLLM 0.23"
   },
   {
     "id": "qwen3.6-27b-nvfp4-nvidia",
     "title": "Qwen3.6-27B-NVFP4",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-nvidia",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-nvidia",
     "meta": "NVFP4-mixed (dense hybrid) · vLLM 0.23 (AEON)"
   },
   {
     "id": "qwen3.6-27b-nvfp4-unsloth",
     "title": "Qwen3.6-27B-NVFP4 (Unsloth)",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-unsloth",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-27b-nvfp4-unsloth",
     "meta": "NVFP4-mixed (dense hybrid) · vLLM 0.23 (AEON)",
     "links": [
       {
         "label": "lmswitch: qwen3.6-27b-nvfp4-unsloth-bench.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml"
       }
     ]
   },
   {
     "id": "qwen3.6-35b-heretic-dflash-bench",
     "title": "Qwen3.6-35B-heretic",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-heretic-dflash-bench",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-heretic-dflash-bench",
     "meta": "NVFP4-mixed (compressed-tensors) · vLLM 0.23"
   },
   {
     "id": "qwen3.6-35b-nvfp4-specoff",
     "title": "Qwen3.6-35B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-specoff",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-specoff",
     "meta": "NVFP4-mixed (spec OFF) · vLLM 0.23 (AEON)"
   },
   {
     "id": "qwen3.6-35b-nvfp4-nvidia",
     "title": "Qwen3.6-35B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-nvidia",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-nvidia",
     "meta": "NVFP4-mixed +MTP · vLLM 0.23 (AEON)"
   },
   {
     "id": "qwen3.6-35b-nvfp4-unsloth-fast",
     "title": "Qwen3.6-35B-A3B-NVFP4-Fast (Unsloth)",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-unsloth-fast",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-nvfp4-unsloth-fast",
     "meta": "NVFP4-mixed (MoE hybrid) · vLLM 0.23 (AEON)",
     "links": [
       {
         "label": "lmswitch: qwen3.6-35b-nvfp4-fast.yaml",
-        "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml"
+        "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml"
       }
     ]
   },
   {
     "id": "qwen3.6-35b-q4-llamacpp",
     "title": "Qwen3.6-35B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q4-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q4-llamacpp",
     "meta": "GGUF Q4_K_XL · llama.cpp"
   },
   {
     "id": "qwen3.6-35b-q8-llamacpp",
     "title": "Qwen3.6-35B-A3B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q8-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.6-35b-q8-llamacpp",
     "meta": "GGUF Q8_K_XL · llama.cpp"
   },
   {
     "id": "qwen3.8-27b-nvfp4-sglang-dspark-bench",
     "title": "Qwen3.8-27B",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwen3.8-27b-nvfp4-sglang",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwen3.8-27b-nvfp4-sglang",
     "meta": "NVFP4-mixed (ModelOpt) · SGLang nightly-dev-20260814-c4271c3f"
   },
   {
@@ -288,19 +288,19 @@
   {
     "id": "qwopus3.6-27b-coder-q8-llamacpp",
     "title": "Qwopus3.6-27B-Coder",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/qwopus3.6-27b-coder-q8-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/qwopus3.6-27b-coder-q8-llamacpp",
     "meta": "GGUF Q8_0 · llama.cpp"
   },
   {
     "id": "step-3.7-flash-llamacpp",
     "title": "Step-3.7-Flash",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/step-3.7-flash-llamacpp",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/step-3.7-flash-llamacpp",
     "meta": "GGUF IQ4_XS · llama.cpp"
   },
   {
     "id": "superqwen3.8-27b-ablit-nvfp4-bench",
     "title": "SuperQwen3.8-27B-abliterated",
-    "url": "https://github.com/jvr0x/dgx-spark-bench/tree/main/recipes/superqwen3.8-27b-ablit-nvfp4",
+    "url": "https://github.com/javierbits/dgx-spark-bench/tree/main/recipes/superqwen3.8-27b-ablit-nvfp4",
     "meta": "NVFP4 W4A4 group-16 (ModelOpt) · vLLM (anemll dspark-vllm-gx10 0.1.1)"
   }
 ]

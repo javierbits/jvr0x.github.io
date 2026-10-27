@@ -1,7 +1,7 @@
 [
   {
     "title": "DeepSeek-V4.1-Flash EXL3 on one DGX Spark",
-    "url": "https://github.com/jvr0x/DeepSeek-V4.1-Flash-EXL3-DGX-Spark-recipe",
+    "url": "https://github.com/javierbits/DeepSeek-V4.1-Flash-EXL3-DGX-Spark-recipe",
     "description": "Serving DeepSeek-V4.1-Flash as EXL3 on a single DGX Spark, about 17.5 tok/s with the DSpark drafter.",
     "meta": "fork · ExLlamaV3 · 1× DGX Spark",
     "tags": ["DeepSeek", "EXL3", "Speculative decoding"]

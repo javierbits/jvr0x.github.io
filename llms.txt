@@ -20,21 +20,21 @@
 - [Voxel Bridge Challenge](https://jvr0x.com/voxel-bridge-challenge/): one prompt, many local models, same Three.js world
 - [murmur](https://jvr0x.com/murmur/): local hold-to-talk dictation for macOS (whisper.cpp)
 - [SolDecode](https://jvr0x.com/soldecode-extension/): Chrome extension that previews Solana transactions before signing
-- [lmswitch](https://github.com/jvr0x/lmswitch): list and toggle local LLMs from per-model YAML configs
-- [ai-models](https://github.com/jvr0x/ai-models): the lmswitch recipes I run
-- [zed-token-counter](https://github.com/jvr0x/zed-token-counter): Zed extension showing LLM token counts as inline hints
-- [dgx-spark-rack](https://github.com/jvr0x/dgx-spark-rack): stackable 3D-printable desktop rack for DGX Spark (OpenSCAD)
+- [lmswitch](https://github.com/javierbits/lmswitch): list and toggle local LLMs from per-model YAML configs
+- [ai-models](https://github.com/javierbits/ai-models): the lmswitch recipes I run
+- [zed-token-counter](https://github.com/javierbits/zed-token-counter): Zed extension showing LLM token counts as inline hints
+- [dgx-spark-rack](https://github.com/javierbits/dgx-spark-rack): stackable 3D-printable desktop rack for DGX Spark (OpenSCAD)
 - [Odin Scan](https://odinscan.ai): continuous AI security auditing for smart contracts
 
 ## Models
 
-- [Javi0.2-4B (alpha)](https://huggingface.co/jvr0x/Javi0.2-4B-GGUF): 4B agent model fine-tuned from Qwen3.5-4B to look things up instead of guessing
-- [Qwen3-4B Pirate](https://huggingface.co/jvr0x/Qwen3-4B-Pirate-GGUF): Qwen3-4B-Instruct-2507 fine-tuned to answer in pirate dialect
+- [Javi0.2-4B (alpha)](https://huggingface.co/javierbits/Javi0.2-4B-GGUF): 4B agent model fine-tuned from Qwen3.5-4B to look things up instead of guessing
+- [Qwen3-4B Pirate](https://huggingface.co/javierbits/Qwen3-4B-Pirate-GGUF): Qwen3-4B-Instruct-2507 fine-tuned to answer in pirate dialect
 
 ## Elsewhere
 
 - [AGI Checkpoint](https://agicheckpoint.com)
-- [X: @jvr0x](https://x.com/jvr0x)
-- [GitHub](https://github.com/jvr0x)
-- [Hugging Face](https://huggingface.co/jvr0x)
+- [X: @javierbits](https://x.com/javierbits)
+- [GitHub](https://github.com/javierbits)
+- [Hugging Face](https://huggingface.co/javierbits)
 - Email: javier@jvr0x.addy.io

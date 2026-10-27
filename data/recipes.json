@@ -2,263 +2,263 @@
   {
     "id": "deepseek-v4-flash-0731-ablit-dual",
     "title": "DeepSeek-V4-Flash 0731 Abliterated 1M [DUAL 2x SPARK]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-0731-ablit-dual.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-0731-ablit-dual.yaml",
     "meta": "deepseek-v4-flash-0731-ablit-dual.yaml · vllm-dual · drowzeys/keys-DeepSeekV4-Flash-GA-0731-Dspark-Abliterated-32-32",
     "description": "Keys abliterated DeepSeek-V4-Flash-0731 - TP=2 across spark + gigabyte over CX7 (1M ctx)."
   },
   {
     "id": "deepseek-v4-flash-0731-dual",
     "title": "DeepSeek-V4-Flash 0731 1M [DUAL 2x SPARK]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-0731-dual.yaml",
     "meta": "deepseek-v4-flash-0731-dual.yaml · vllm-dual · deepseek-ai/DeepSeek-V4-Flash-0731",
     "description": "DeepSeek V4 Flash 0731 - TP=2 across spark + gigabyte over CX7 (1M ctx)."
   },
   {
     "id": "deepseek-v4-flash-dspark",
     "title": "DeepSeek-V4-Flash DSpark 1M [DUAL 2x SPARK]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/deepseek-v4-flash-dspark.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/deepseek-v4-flash-dspark.yaml",
     "meta": "deepseek-v4-flash-dspark.yaml · vllm-dual · deepseek-ai/DeepSeek-V4-Flash-DSpark",
     "description": "DeepSeek V4 Flash DSpark - TP=2 across spark + gigabyte over CX7 (1M ctx)."
   },
   {
     "id": "diffusiongemma-26b",
     "title": "DiffusionGemma-26B-IT",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/diffusiongemma-26b.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/diffusiongemma-26b.yaml",
     "meta": "diffusiongemma-26b.yaml · vllm · nvidia/diffusiongemma-26B-A4B-it-NVFP4"
   },
   {
     "id": "gemma-4-12b-it-nvfp4",
     "title": "Gemma-4-12B-IT NVFP4 (Unsloth)",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gemma-4-12b-it-nvfp4.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gemma-4-12b-it-nvfp4.yaml",
     "meta": "gemma-4-12b-it-nvfp4.yaml · vllm · unsloth/gemma-4-12b-it-NVFP4",
     "description": "Gemma-4-12B-IT NVFP4 (Unsloth) - small-footprint vLLM profile."
   },
   {
     "id": "gemma-4-12b-it-qat-mtp",
     "title": "Gemma-4-12B-IT QAT Q4 MTP",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gemma-4-12b-it-qat-mtp.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gemma-4-12b-it-qat-mtp.yaml",
     "meta": "gemma-4-12b-it-qat-mtp.yaml · llama · unsloth/gemma-4-12B-it-qat-GGUF/gemma-4-12B-it-qat-UD-Q4_K_XL.gguf",
     "description": "Gemma-4-12B-IT QAT GGUF (Unsloth) - vision + MTP speculative decoding."
   },
   {
     "id": "gemma-4-12b-it",
     "title": "Gemma-4-12B Instruct",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gemma-4-12b-it.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gemma-4-12b-it.yaml",
     "meta": "gemma-4-12b-it.yaml · llama · unsloth/gemma-4-12b-it-GGUF/gemma-4-12b-it-Q4_K_M.gguf"
   },
   {
     "id": "gemma-4-26b-a4b-it",
     "title": "Gemma-4-26B-A4B Instruct",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gemma-4-26b-a4b-it.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gemma-4-26b-a4b-it.yaml",
     "meta": "gemma-4-26b-a4b-it.yaml · vllm · google/gemma-4-26B-A4B-it"
   },
   {
     "id": "gemma4-31b",
     "title": "Gemma-4-31B-IT",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gemma4-31b.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gemma4-31b.yaml",
     "meta": "gemma4-31b.yaml · vllm · nvidia/Gemma-4-31B-IT-NVFP4"
   },
   {
     "id": "gemma4-coder",
     "title": "Gemma-4-12B Coder",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gemma4-coder.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gemma4-coder.yaml",
     "meta": "gemma4-coder.yaml · llama · yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF/gemma4-coding-Q8_0.gguf"
   },
   {
     "id": "gpt-oss-20b",
     "title": "GPT-OSS-20B",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/gpt-oss-20b.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/gpt-oss-20b.yaml",
     "meta": "gpt-oss-20b.yaml · llama · openai/gpt-oss-20b-GGUF/gpt-oss-20b-UD-Q4_K_XL.gguf"
   },
   {
     "id": "kimi-linear",
     "title": "Kimi-Linear-48B Q8",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/kimi-linear.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/kimi-linear.yaml",
     "meta": "kimi-linear.yaml · llama · bartowski/moonshotai_Kimi-Linear-48B-A3B-Instruct-GGUF/moonshotai_Kimi-Linear-48B-A3B-Instruct-Q8_0/moonshotai_Kimi-Linear-48B-A3B-Instruct-Q8_0-00001-of-00002.gguf"
   },
   {
     "id": "mistral-medium-3.5-128b-nvfp4-bench",
     "title": "Mistral-Medium-3.5-128B NVFP4 [BENCH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/mistral-medium-3.5-128b-nvfp4-bench.yaml",
     "meta": "mistral-medium-3.5-128b-nvfp4-bench.yaml · vllm · nvidia/Mistral-Medium-3.5-128B-NVFP4",
     "description": "lmswitch BENCH PROFILE of Mistral-Medium-3.5-128B NVFP4 - dense 128B via vLLM."
   },
   {
     "id": "nemotron-3-super-nvfp4-vllm",
     "title": "Nemotron-3-Super-120B NVFP4 [BENCH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nemotron-3-super-nvfp4-vllm.yaml",
     "meta": "nemotron-3-super-nvfp4-vllm.yaml · vllm · nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
     "description": "lmswitch BENCH PROFILE of Nemotron-3-Super-120B-A12B NVFP4 via vLLM (stock image)."
   },
   {
     "id": "nemotron-3-super-nvfp4",
     "title": "Nemotron-3-Super-120B NVFP4",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nemotron-3-super-nvfp4.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nemotron-3-super-nvfp4.yaml",
     "meta": "nemotron-3-super-nvfp4.yaml · vllm · nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-NVFP4",
     "description": "lmswitch recipe for NVIDIA Nemotron-3-Super-120B-A12B-NVFP4 on 1× DGX Spark."
   },
   {
     "id": "nemotron",
     "title": "Nemotron-Nano-30B",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nemotron.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nemotron.yaml",
     "meta": "nemotron.yaml · llama · nemotron3-gguf/Nemotron-3-Nano-30B-A3B-UD-Q8_K_XL.gguf"
   },
   {
     "id": "nemotron3-nano-fp8",
     "title": "Nemotron-3-Nano-30B FP8",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nemotron3-nano-fp8.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nemotron3-nano-fp8.yaml",
     "meta": "nemotron3-nano-fp8.yaml · vllm · nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-FP8"
   },
   {
     "id": "nemotron3-nano-omni-nvfp4",
     "title": "Nemotron-3-Nano Omni NVFP4",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nemotron3-nano-omni-nvfp4.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nemotron3-nano-omni-nvfp4.yaml",
     "meta": "nemotron3-nano-omni-nvfp4.yaml · vllm · nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-NVFP4"
   },
   {
     "id": "nex-n2-pro",
     "title": "Nex-N2-Pro 397B-A17B (IQ1_M)",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nex-n2-pro.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nex-n2-pro.yaml",
     "meta": "nex-n2-pro.yaml · llama · Nex-N2-Pro-IQ1_M/IQ1_M/Nex-397B-A17B-IQ1_M-00001-of-00005.gguf"
   },
   {
     "id": "nvidia-nemotron-labs-3-puzzle-75b",
     "title": "Nemotron-Labs-3-Puzzle-75B-A9B NVFP4",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/nvidia-nemotron-labs-3-puzzle-75b.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/nvidia-nemotron-labs-3-puzzle-75b.yaml",
     "meta": "nvidia-nemotron-labs-3-puzzle-75b.yaml · vllm · nvidia/NVIDIA-Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4",
     "description": "lmswitch recipe for NVIDIA Nemotron-Labs-3-Puzzle-75B-A9B-NVFP4 on 1× DGX Spark."
   },
   {
     "id": "ornith-35b-nvfp4-aeon7",
     "title": "Ornith-1.0-35B NVFP4 (AEON) [BENCH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/ornith-35b-nvfp4-aeon7.yaml",
     "meta": "ornith-35b-nvfp4-aeon7.yaml · vllm · AEON-7/Ornith-1.0-35B-AEON-Ultimate-Uncensored-NVFP4",
     "description": "lmswitch BENCH PROFILE of Ornith-1.0-35B-AEON NVFP4 - hybrid Mamba/Attention."
   },
   {
     "id": "ornith-35b-q8",
     "title": "Ornith-1.0-35B Q8",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/ornith-35b-q8.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/ornith-35b-q8.yaml",
     "meta": "ornith-35b-q8.yaml · llama · ornith/Ornith-1.0-35B-Q8_0/ornith-1.0-35b-Q8_0.gguf"
   },
   {
     "id": "qwen-agentworld-stock",
     "title": "Qwen-AgentWorld-35B-A3B",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen-agentworld-stock.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen-agentworld-stock.yaml",
     "meta": "qwen-agentworld-stock.yaml · vllm · Qwen-AgentWorld-35B-A3B"
   },
   {
     "id": "qwen3-coder-next",
     "title": "Qwen3-Coder-Next Q4",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3-coder-next.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3-coder-next.yaml",
     "meta": "qwen3-coder-next.yaml · llama · unsloth/Qwen3-Coder-Next-GGUF/Qwen3-Coder-Next-UD-Q4_K_XL.gguf"
   },
   {
     "id": "qwen3-vl-30b",
     "title": "Qwen3-VL-30B-A3B Instruct",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3-vl-30b.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3-vl-30b.yaml",
     "meta": "qwen3-vl-30b.yaml · llama · unsloth/Qwen3-VL-30B-A3B-Instruct-GGUF/Qwen3-VL-30B-A3B-Instruct-UD-Q4_K_XL.gguf"
   },
   {
     "id": "qwen3-vl-8b",
     "title": "Qwen3-VL-8B Instruct Q4",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3-vl-8b.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3-vl-8b.yaml",
     "meta": "qwen3-vl-8b.yaml · llama · unsloth/Qwen3-VL-8B-Instruct-GGUF/Qwen3-VL-8B-Instruct-UD-Q4_K_XL.gguf"
   },
   {
     "id": "qwen3.6-27b-nvfp4-aeon7",
     "title": "Qwen3.6-27B AEON Uncensored NVFP4 +DFlash",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-aeon7.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-aeon7.yaml",
     "meta": "qwen3.6-27b-nvfp4-aeon7.yaml · vllm · AEON-7/Qwen3.6-27B-AEON-Ultimate-Uncensored-NVFP4"
   },
   {
     "id": "qwen3.6-27b-nvfp4-miaai",
     "title": "Qwen3.6-27B NVFP4 (MiaAI-Lab repo config)",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-miaai.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-miaai.yaml",
     "meta": "qwen3.6-27b-nvfp4-miaai.yaml · vllm · nvidia/Qwen3.6-27B-NVFP4",
     "description": "Faithful port of MiaAI-Lab/Qwen3.6-27B-NVFP4-vLLM start.sh, as a lmswitch recipe."
   },
   {
     "id": "qwen3.6-27b-nvfp4-unsloth-bench",
     "title": "Qwen3.6-27B NVFP4 (Unsloth) [BENCH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth-bench.yaml",
     "meta": "qwen3.6-27b-nvfp4-unsloth-bench.yaml · vllm · unsloth/Qwen3.6-27B-NVFP4",
     "description": "lmswitch BENCH PROFILE of qwen3.6-27b-nvfp4-unsloth - local NVFP4 dense hybrid VLM."
   },
   {
     "id": "qwen3.6-27b-nvfp4-unsloth",
     "title": "Qwen3.6-27B NVFP4 [UNSLOTH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-27b-nvfp4-unsloth.yaml",
     "meta": "qwen3.6-27b-nvfp4-unsloth.yaml · vllm · unsloth/Qwen3.6-27B-NVFP4",
     "description": "lmswitch recipe for Qwen3.6-27B-NVFP4 (unsloth) on 1× DGX Spark."
   },
   {
     "id": "qwen3.6-35b-a3b-nvfp4-fast",
     "title": "Qwen3.6-35B-A3B NVFP4-Fast [UNSLOTH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-a3b-nvfp4-fast.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-a3b-nvfp4-fast.yaml",
     "meta": "qwen3.6-35b-a3b-nvfp4-fast.yaml · vllm · unsloth/Qwen3.6-35B-A3B-NVFP4-Fast",
     "description": "lmswitch recipe for Qwen3.6-35B-A3B-NVFP4-Fast (unsloth) on 1× DGX Spark."
   },
   {
     "id": "qwen3.6-35b-heretic-dflash-aeon7",
     "title": "Qwen3.6-35B heretic NVFP4 +DFlash",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-heretic-dflash-aeon7.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-heretic-dflash-aeon7.yaml",
     "meta": "qwen3.6-35b-heretic-dflash-aeon7.yaml · vllm · AEON-7/Qwen3.6-35B-A3B-heretic-NVFP4"
   },
   {
     "id": "qwen3.6-35b-nvfp4-fast",
     "title": "Qwen3.6-35B-A3B NVFP4 Fast (Unsloth) [BENCH]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-nvfp4-fast.yaml",
     "meta": "qwen3.6-35b-nvfp4-fast.yaml · vllm · unsloth/Qwen3.6-35B-A3B-NVFP4-Fast",
     "description": "lmswitch BENCH PROFILE of qwen3.6-35b-nvfp4-unsloth-fast - local NVFP4 MoE hybrid."
   },
   {
     "id": "qwen3.6-35b-nvfp4-nvidia-aeon7",
     "title": "Qwen3.6-35B-A3B NVFP4 (NVIDIA)",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-nvfp4-nvidia-aeon7.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-nvfp4-nvidia-aeon7.yaml",
     "meta": "qwen3.6-35b-nvfp4-nvidia-aeon7.yaml · vllm · nvidia/qwen3.6-35b-a3b-nvfp4"
   },
   {
     "id": "qwen3.6-35b-q8-mtp",
     "title": "Qwen3.6-35B-A3B Q8 MTP",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-35b-q8-mtp.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-35b-q8-mtp.yaml",
     "meta": "qwen3.6-35b-q8-mtp.yaml · llama · unsloth/Qwen3.6-35B-A3B-MTP-GGUF/Qwen3.6-35B-A3B-UD-Q8_K_XL.gguf"
   },
   {
     "id": "qwen3.6-distill-q8",
     "title": "Qwen3.6-35B Distilled Q8",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-distill-q8.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-distill-q8.yaml",
     "meta": "qwen3.6-distill-q8.yaml · llama · lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-Q8_0-GGUF/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled.Q8_0.gguf"
   },
   {
     "id": "qwen3.6-distill",
     "title": "Qwen3.6-35B Distilled",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-distill.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-distill.yaml",
     "meta": "qwen3.6-distill.yaml · llama · lordx64/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled-IQ4_XS-GGUF/Qwen3.6-35B-A3B-Claude-4.7-Opus-Reasoning-Distilled.IQ4_XS.gguf"
   },
   {
     "id": "qwen3.6-kimi-distill",
     "title": "Qwen3.6-35B Kimi-K2.6 Distilled Q8",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwen3.6-kimi-distill.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwen3.6-kimi-distill.yaml",
     "meta": "qwen3.6-kimi-distill.yaml · llama · lordx64/Qwen3.6-35B-A3B-Kimi-K2.6-Reasoning-Distilled-GGUF/Qwen3.6-35B-A3B-Kimi-K2.6-Reasoning-Distilled.Q8_0.gguf"
   },
   {
     "id": "qwopus3.6-coder",
     "title": "Qwopus3.6-27B Coder MTP (Q8_0)",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/qwopus3.6-coder.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/qwopus3.6-coder.yaml",
     "meta": "qwopus3.6-coder.yaml · llama · Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF/Qwopus3.6-27B-Coder-MTP-Q8_0.gguf"
   },
   {
     "id": "red-snow-exl3-sage-dual",
     "title": "RED-SNOW-5.3-FLASH EXL3-SAGE 4.91bpw [DUAL 2x SPARK job]",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/red-snow-exl3-sage-dual.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/red-snow-exl3-sage-dual.yaml",
     "meta": "red-snow-exl3-sage-dual.yaml · exllamav3-dual · vcruz305/RED-SNOW-5.3-FLASH-EXL3-SAGE-4.91bpw",
     "description": "lmswitch job for RED-SNOW-5.3-FLASH EXL3 SAGE 4.91bpw across spark + gigabyte."
   },
   {
     "id": "step-3.7-flash",
     "title": "Step-3.7-Flash (IQ4_XS)",
-    "url": "https://github.com/jvr0x/ai-models/blob/main/step-3.7-flash.yaml",
+    "url": "https://github.com/javierbits/ai-models/blob/main/step-3.7-flash.yaml",
     "meta": "step-3.7-flash.yaml · llama · unsloth/Step-3.7-Flash-GGUF/UD-IQ4_XS/Step-3.7-Flash-UD-IQ4_XS-00001-of-00003.gguf"
   }
 ]

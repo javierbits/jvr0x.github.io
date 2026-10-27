@@ -1,7 +1,7 @@
 [
   {
     "title": "lmswitch",
-    "url": "https://github.com/jvr0x/lmswitch",
+    "url": "https://github.com/javierbits/lmswitch",
     "description": "List and toggle local LLMs (GGUF via llama.cpp, vLLM via Docker) from per-model YAML configs. The recipes on this site are lmswitch configs.",
     "tags": ["CLI", "Python", "llama.cpp", "vLLM"],
     "links": [{"label": "recipes", "url": "/recipes/"}]
@@ -11,7 +11,7 @@
     "url": "/murmur/",
     "description": "Local, hold-to-talk voice dictation for macOS. Transcribes with whisper.cpp and types into any app, with optional LLM cleanup via Ollama.",
     "tags": ["macOS", "whisper.cpp", "Privacy"],
-    "links": [{"label": "GitHub", "url": "https://github.com/jvr0x/murmur"}]
+    "links": [{"label": "GitHub", "url": "https://github.com/javierbits/murmur"}]
   },
   {
     "title": "SolDecode",
@@ -21,19 +21,19 @@
   },
   {
     "title": "zed-token-counter",
-    "url": "https://github.com/jvr0x/zed-token-counter",
+    "url": "https://github.com/javierbits/zed-token-counter",
     "description": "Zed editor extension that shows LLM token counts as inline hints.",
     "tags": ["Zed", "Extension", "Tokens"]
   },
   {
     "title": "dgx-spark-rack",
-    "url": "https://github.com/jvr0x/dgx-spark-rack",
+    "url": "https://github.com/javierbits/dgx-spark-rack",
     "description": "Stackable, parametric, 3D-printable desktop rack for DGX Spark, written in OpenSCAD.",
     "tags": ["OpenSCAD", "3D printing", "DGX Spark"]
   },
   {
     "title": "RepoBeagle",
-    "url": "https://github.com/jvr0x/repobeagle",
+    "url": "https://github.com/javierbits/repobeagle",
     "description": "Static safety scanner for GitHub repos: a GREEN / YELLOW / RED verdict with file:line evidence before you clone or install. Never runs the code; catches prompt injection, MCP tool poisoning and install-time traps, entirely offline in a sandboxed container.",
     "tags": ["Security", "CLI", "Docker", "AI agents"],
     "links": [{"label": "Grok bot", "url": "https://x.ai/bot/bTuuNK785OULBheQ5rPZ-"}]

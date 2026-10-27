@@ -39,4 +39,4 @@ python tools/shots.py http://localhost:8000 /tmp/shots   # overflow + screenshot
 
 ## License
 
-MIT © 2026 jvr0x.
+MIT © 2026 javierbits.

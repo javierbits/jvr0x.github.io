@@ -18,7 +18,7 @@
   const grid = document.querySelector("[data-hf-models]");
   if (!grid) return;
 
-  const author = grid.getAttribute("data-hf-models") || "jvr0x";
+  const author = grid.getAttribute("data-hf-models") || "javierbits";
   const API = "https://huggingface.co/api/models";
   const FIELDS = ["cardData", "downloads", "lastModified", "likes", "library_name", "pipeline_tag", "siblings", "tags"];
   const TAG_LABELS = [

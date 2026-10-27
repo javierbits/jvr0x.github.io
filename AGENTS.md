@@ -86,7 +86,7 @@ Substack serves that embed light and only follows the publication's own theme (`
 
 - Tagline: "Javier • priv/acc | Local AI, security, privacy & crypto" (footer, meta descriptions, OG image, llms.txt)
 - Hero (home and /about): heading "Javier • priv/acc", then "Local AI, security, privacy & crypto" below it, never the name twice
-- Titles: `jvr0x` on the homepage, `<Page> · jvr0x` on subpages (same for og:title / twitter:title)
+- Titles: `javierbits` on the homepage, `<Page> · javierbits` on subpages (same for og:title / twitter:title)
 - Hero line: "I run 3× DGX Spark and publish open benchmarks, recipes and fine-tunes."
 - Meta descriptions lead with Local AI. No em dashes in new copy.
 

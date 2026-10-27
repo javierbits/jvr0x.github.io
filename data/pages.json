@@ -8,49 +8,49 @@
   {
     "path": "/about/",
     "file": "about/index.html",
-    "title": "About · jvr0x",
+    "title": "About · javierbits",
     "description": "Local AI engineer running 3× DGX Spark. Founder of Odin Scan, ex-Spotify, led smart contract teams at MANTRA and Migaloo. Experience, stack, education and contact."
   },
   {
     "path": "/newsletter/",
     "file": "newsletter/index.html",
-    "title": "AGI Checkpoint · jvr0x",
+    "title": "AGI Checkpoint · javierbits",
     "description": "AGI Checkpoint: a free weekly newsletter every Friday on open models, research, training recipes and tools for people who run models locally. Free Local AI Cheat Sheet on signup."
   },
   {
     "path": "/models/",
     "file": "models/index.html",
-    "title": "Models · jvr0x",
-    "description": "Local AI fine-tunes by jvr0x, trained on DGX Spark and published on Hugging Face in GGUF and EXL3 quants for llama.cpp and ExLlamaV3."
+    "title": "Models · javierbits",
+    "description": "Local AI fine-tunes by javierbits, trained on DGX Spark and published on Hugging Face in GGUF and EXL3 quants for llama.cpp and ExLlamaV3."
   },
   {
     "path": "/recipes/",
     "file": "recipes/index.html",
-    "title": "Recipes · jvr0x",
+    "title": "Recipes · javierbits",
     "description": "Local AI serving recipes for DGX Spark: lmswitch configs for llama.cpp, vLLM and ExLlamaV3, plus the reproducible dgx-spark-bench recipes behind every benchmark."
   },
   {
     "path": "/lab/",
     "file": "lab/index.html",
-    "title": "Lab · jvr0x",
+    "title": "Lab · javierbits",
     "description": "Local AI experiments: live LLM benchmarks on DGX Spark, a tokens/sec visual simulator, and the Voxel Bridge Challenge comparing local models on one prompt."
   },
   {
     "path": "/tools/",
     "file": "tools/index.html",
-    "title": "Tools · jvr0x",
-    "description": "Local AI tools by jvr0x: lmswitch model switcher, murmur local dictation for macOS, SolDecode Solana transaction preview, a Zed token counter and a 3D-printable DGX Spark rack."
+    "title": "Tools · javierbits",
+    "description": "Local AI tools by javierbits: lmswitch model switcher, murmur local dictation for macOS, SolDecode Solana transaction preview, a Zed token counter and a 3D-printable DGX Spark rack."
   },
   {
     "path": "/bots/",
     "file": "bots/index.html",
-    "title": "Grok bots · jvr0x",
-    "description": "Grok bots on X by jvr0x: automated assistants that plug into your workflows, handle the repetitive work and deliver results right in your timeline."
+    "title": "Grok bots · javierbits",
+    "description": "Grok bots on X by javierbits: automated assistants that plug into your workflows, handle the repetitive work and deliver results right in your timeline."
   },
   {
     "path": "/voxel-bridge-challenge/",
     "file": "voxel-bridge-challenge/index.html",
-    "title": "Voxel Bridge Challenge · jvr0x",
+    "title": "Voxel Bridge Challenge · javierbits",
     "description": "One prompt, several local models: each builds the same Three.js voxel world with a 40-block arch bridge, an earthquake rebuild and a widening river. Live side-by-side comparison."
   },
   {"path": "/dgx-spark-bench/"},

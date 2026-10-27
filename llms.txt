@@ -1,4 +1,4 @@
-# jvr0x
+# javierbits
 
 > Javier • priv/acc | Local AI, security, privacy & crypto. I run 3× DGX Spark and publish open benchmarks, recipes and fine-tunes. Founder of Odin Scan · ex-Spotify · led smart contract teams at MANTRA/Migaloo. I write AGI Checkpoint, a weekly newsletter for people who run models locally.
 
